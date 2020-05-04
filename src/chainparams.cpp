@@ -58,12 +58,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (    0, uint256("0000033346b0b31697bcd178789fe1d6d10f96a7fd46d74fbf647d5ea3757348"))
-    (30000, uint256("8c65cf5033aa6b6ea4254c830c4c77c4de30875e6ba5ee619b31350bc314b7cf"))
-    (31331, uint256("f88c7264a05c05033a98c92088613880cd4d210aab12367eb48d5fe3a0189672"))
-    (32848, uint256("352431d65a69b3425ce508cfbbff077c8fdc2833a84e6e239f0ba8e7300e9744"))
-    (31562, uint256("7738a178f95139b2cd6b2120b19584cc17a2a28a00962b5d28978cd199427821"))
-    (126438, uint256("7f0c69501d91e4a4ed413bf9942972cf489e79034a0af4a6440fa513c037140d"));
+    (    0, uint256("0000033346b0b31697bcd178789fe1d6d10f96a7fd46d74fbf647d5ea3757348"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -121,7 +116,7 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x0f;
+        pchMessageStart[0] = 0x1f;
         pchMessageStart[1] = 0x0a;
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xe0;
@@ -136,13 +131,13 @@ public:
         nMinerThreads = 1;
         nTargetTimespan = 24 * 60 * 60; // Helium: 1 day
         nTargetSpacing = 60;  // Helium: 1 minute
-        nMaturity = 100;
+        nMaturity = 20;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 21000000 * COIN;
+        nMaxMoneyOut = 100000000 * COIN;
 
         /** Height or Time Based Activations **/
         //nLastPOWBlock = 20160; // 14 days @ 1440 per day (PIVX: 259200, Phore 200)
-        nLastPOWBlock = 400; // Short PoW phase before transition to PoS
+        nLastPOWBlock = 200; // Short PoW phase before transition to PoS
         //if the lowest block height (vSortedByTimestamp[0]) is >= switch height, use new modifier calc
         // nModifierUpdateBlock = 0; // (PIVX: 615800)
         nZerocoinStartHeight = 999999999; // (PIVX: 863787, Phore 90000)
@@ -203,12 +198,12 @@ public:
         }
         // Mainnet --- nonce: 6846 time: 1535104494 hash: 0x0000033346b0b31697bcd178789fe1d6d10f96a7fd46d74fbf647d5ea3757348 merklehash: 0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd
 
-        vSeeds.push_back(CDNSSeedData("knout", "dnsseed.helium.cl"));
-        vSeeds.push_back(CDNSSeedData("seed1", "s1.heliumcoin.info"));
-	vSeeds.push_back(CDNSSeedData("seed2", "s2.heliumcoin.info"));
-	vSeeds.push_back(CDNSSeedData("seed3", "s3.heliumcoin.info"));
-	vSeeds.push_back(CDNSSeedData("seed4", "s4.heliumcoin.info"));
-        vSeeds.push_back(CDNSSeedData("seed5", "s5.heliumcoin.info"));
+        // vSeeds.push_back(CDNSSeedData("knout", "dnsseed.helium.cl"));
+        // vSeeds.push_back(CDNSSeedData("seed1", "s1.heliumcoin.info"));
+	    // vSeeds.push_back(CDNSSeedData("seed2", "s2.heliumcoin.info"));
+	    // vSeeds.push_back(CDNSSeedData("seed3", "s3.heliumcoin.info"));
+	    // vSeeds.push_back(CDNSSeedData("seed4", "s4.heliumcoin.info"));
+        // vSeeds.push_back(CDNSSeedData("seed5", "s5.heliumcoin.info"));
 	
         // Helium addresses start with 'S'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);
