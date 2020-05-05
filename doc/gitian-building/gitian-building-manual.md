@@ -1,20 +1,20 @@
 Getting and building the inputs
 --------------------------------
 
-At this point you have two options, you can either use the automated script (found in [https://github.com/heliumchain/helium/blob/master/contrib/gitian-build.py](https://github.com/heliumchain/helium/blob/master/contrib/gitian-build.py), only works in Debian/Ubuntu) or you could manually do everything by following this guide.
+At this point you have two options, you can either use the automated script (found in [https://github.com/securuschain/securus/blob/master/contrib/gitian-build.py](https://github.com/securuschain/securus/blob/master/contrib/gitian-build.py), only works in Debian/Ubuntu) or you could manually do everything by following this guide.
 If you are using the automated script, then run it with the `--setup` command. Afterwards, run it with the `--build` command (example: `contrib/gitian-build.py -b signer 0.15.0`). Otherwise ignore this.
 
-Follow the instructions in [https://github.com/heliumchain/helium/blob/master/doc/release-process.md](https://github.com/heliumchain/helium/blob/master/doc/release-process.md#fetch-and-create-inputs-first-time-or-when-dependency-versions-change)
-in the helium repository under 'Fetch and create inputs' to install sources which require
+Follow the instructions in [https://github.com/securuschain/securus/blob/master/doc/release-process.md](https://github.com/securuschain/securus/blob/master/doc/release-process.md#fetch-and-create-inputs-first-time-or-when-dependency-versions-change)
+in the securus repository under 'Fetch and create inputs' to install sources which require
 manual intervention. Also optionally follow the next step: 'Seed the Gitian sources cache
 and offline git repositories' which will fetch the remaining files required for building
 offline.
 
-Building Helium Core
+Building Securus Core
 ----------------
 
-To build Helium Core (for Linux, OS X and Windows) just follow the steps under 'perform
-Gitian builds' in [https://github.com/heliumchain/helium/blob/master/doc/release-process.md](https://github.com/heliumchain/helium/blob/master/doc/release-process.md#setup-and-perform-gitian-builds) in the helium repository.
+To build Securus Core (for Linux, OS X and Windows) just follow the steps under 'perform
+Gitian builds' in [https://github.com/securuschain/securus/blob/master/doc/release-process.md](https://github.com/securuschain/securus/blob/master/doc/release-process.md#setup-and-perform-gitian-builds) in the securus repository.
 
 This may take some time as it will build all the dependencies needed for each descriptor.
 These dependencies will be cached after a successful build to avoid rebuilding them when possible.
@@ -28,12 +28,12 @@ tail -f var/build.log
 
 Output from `gbuild` will look something like
 
-    Initialized empty Git repository in /home/gitianuser/gitian-builder/inputs/helium/.git/
+    Initialized empty Git repository in /home/gitianuser/gitian-builder/inputs/securus/.git/
     remote: Counting objects: 57959, done.
     remote: Total 57959 (delta 0), reused 0 (delta 0), pack-reused 57958
     Receiving objects: 100% (57959/57959), 53.76 MiB | 484.00 KiB/s, done.
     Resolving deltas: 100% (41590/41590), done.
-    From https://github.com/heliumchain/helium
+    From https://github.com/securuschain/securus
     ... (new tags, new branch etc)
     --- Building for trusty amd64 ---
     Stopping target if it is up
@@ -59,18 +59,18 @@ and inputs.
 
 For example:
 ```bash
-URL=https://github.com/heliumchain/helium.git
+URL=https://github.com/securuschain/securus.git
 COMMIT=2014_03_windows_unicode_path
-./bin/gbuild --commit helium=${COMMIT} --url helium=${URL} ../helium/contrib/gitian-descriptors/gitian-linux.yml
-./bin/gbuild --commit helium=${COMMIT} --url helium=${URL} ../helium/contrib/gitian-descriptors/gitian-win.yml
-./bin/gbuild --commit helium=${COMMIT} --url helium=${URL} ../helium/contrib/gitian-descriptors/gitian-osx.yml
+./bin/gbuild --commit securus=${COMMIT} --url securus=${URL} ../securus/contrib/gitian-descriptors/gitian-linux.yml
+./bin/gbuild --commit securus=${COMMIT} --url securus=${URL} ../securus/contrib/gitian-descriptors/gitian-win.yml
+./bin/gbuild --commit securus=${COMMIT} --url securus=${URL} ../securus/contrib/gitian-descriptors/gitian-osx.yml
 ```
 
 Building fully offline
 -----------------------
 
 For building fully offline including attaching signatures to unsigned builds, the detached-sigs repository
-and the helium git repository with the desired tag must both be available locally, and then gbuild must be
+and the securus git repository with the desired tag must both be available locally, and then gbuild must be
 told where to find them. It also requires an apt-cacher-ng which is fully-populated but set to offline mode, or
 manually disabling gitian-builder's use of apt-get to update the VM build environment.
 
@@ -89,7 +89,7 @@ cd /path/to/gitian-builder
 LXC_ARCH=amd64 LXC_SUITE=trusty on-target -u root apt-get update
 LXC_ARCH=amd64 LXC_SUITE=trusty on-target -u root \
   -e DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y install \
-  $( sed -ne '/^packages:/,/[^-] .*/ {/^- .*/{s/"//g;s/- //;p}}' ../helium/contrib/gitian-descriptors/*|sort|uniq )
+  $( sed -ne '/^packages:/,/[^-] .*/ {/^- .*/{s/"//g;s/- //;p}}' ../securus/contrib/gitian-descriptors/*|sort|uniq )
 LXC_ARCH=amd64 LXC_SUITE=trusty on-target -u root apt-get -q -y purge grub
 LXC_ARCH=amd64 LXC_SUITE=trusty on-target -u root -e DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade
 ```
@@ -109,10 +109,10 @@ Then when building, override the remote URLs that gbuild would otherwise pull fr
 ```bash
 
 cd /some/root/path/
-git clone https://github.com/heliumchain/helium-detached-sigs.git
+git clone https://github.com/securuschain/securus-detached-sigs.git
 
-BTCPATH=/some/root/path/helium
-SIGPATH=/some/root/path/helium-detached-sigs
+BTCPATH=/some/root/path/securus
+SIGPATH=/some/root/path/securus-detached-sigs
 
-./bin/gbuild --url helium=${BTCPATH},signature=${SIGPATH} ../helium/contrib/gitian-descriptors/gitian-win-signer.yml
+./bin/gbuild --url securus=${BTCPATH},signature=${SIGPATH} ../securus/contrib/gitian-descriptors/gitian-win-signer.yml
 ```

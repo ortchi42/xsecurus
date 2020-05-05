@@ -1,4 +1,4 @@
-./src/helium-tx \
+./src/securus-tx \
     -datadir=`pwd`/datadir \
     -create in=4d49a71ec9da436f71ec4ee231d04f292a29cd316f598bb7068feccabdc59485:0 \
     set=prevtxs:"[{\"txid\":\"4d49a71ec9da436f71ec4ee231d04f292a29cd316f598bb7068feccabdc59485\",\"vout\":0,\"scriptPubKey\":\"4d49a71ec9da436f71ec4ee231d04f292a29cd316f598bb7068feccabdc59485\"}]" \

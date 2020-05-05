@@ -269,9 +269,9 @@
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>ZSecurusControlDialog</name>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>securus-core</name>
     </context>
 </TS>

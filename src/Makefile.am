@@ -80,11 +80,11 @@ noinst_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += heliumd
+  bin_PROGRAMS += securusd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += helium-cli helium-tx
+  bin_PROGRAMS += securus-cli securus-tx
 endif
 
 .PHONY: FORCE
@@ -208,7 +208,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between heliumd and helium-qt
+# server: shared between securusd and securus-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -256,7 +256,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between heliumd and helium-qt, but only linked
+# wallet: shared between securusd and securus-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -351,7 +351,7 @@ libzerocoin_libbitcoin_zerocoin_a_SOURCES = \
   libzerocoin/Params.cpp \
   libzerocoin/SerialNumberSignatureOfKnowledge.cpp
 
-# common: shared between heliumd, and helium-qt and non-server tools
+# common: shared between securusd, and securus-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -416,7 +416,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between helium-cli and helium-qt
+# cli: shared between securus-cli and securus-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -426,16 +426,16 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# heliumd binary #
-heliumd_SOURCES = bitcoind.cpp
-heliumd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-heliumd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-heliumd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# securusd binary #
+securusd_SOURCES = bitcoind.cpp
+securusd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+securusd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+securusd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-heliumd_SOURCES += bitcoind-res.rc
+securusd_SOURCES += bitcoind-res.rc
 endif
-heliumd_LDADD = \
+securusd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -448,38 +448,38 @@ heliumd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-heliumd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+securusd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# helium-cli binary #
-helium_cli_SOURCES = bitcoin-cli.cpp
-helium_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-helium_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-helium_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# securus-cli binary #
+securus_cli_SOURCES = bitcoin-cli.cpp
+securus_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+securus_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+securus_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-helium_cli_SOURCES += bitcoin-cli-res.rc
+securus_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-helium_cli_LDADD = \
+securus_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-helium_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+securus_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# helium-tx binary #
-helium_tx_SOURCES = bitcoin-tx.cpp
-helium_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-helium_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-helium_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# securus-tx binary #
+securus_tx_SOURCES = bitcoin-tx.cpp
+securus_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+securus_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+securus_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-helium_tx_SOURCES += bitcoin-tx-res.rc
+securus_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-helium_tx_LDADD = \
+securus_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_ZEROCOIN) \
@@ -487,7 +487,7 @@ helium_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-helium_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+securus_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

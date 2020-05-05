@@ -1,18 +1,18 @@
-Helium Core version 2.2.1 is now available from:
+Securus Core version 2.2.1 is now available from:
 
-  <https://github.com/heliumchain/helium/releases>
+  <https://github.com/securuschain/securus/releases>
 
 This is a new minor version release, including various bug fixes and
 performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/heliumchain/helium/issues>
+  <https://github.com/securuschain/securus/issues>
 
 Compatibility
 ==============
 
-Helium Core is extensively tested on multiple operating systems using
+Securus Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later.
 
 Microsoft ended support for Windows XP on [April 8th, 2014](https://www.microsoft.com/en-us/WindowsForBusiness/end-of-xp-support),
@@ -20,7 +20,7 @@ No attempt is made to prevent installing or running the software on Windows XP, 
 can still do so at your own risk but be aware that there are known instabilities and issues.
 Please do not report issues about Windows XP to the issue tracker.
 
-Helium Core should also work on most other Unix-like systems but is not
+Securus Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 Notable Changes
@@ -45,7 +45,7 @@ blockchain.
 Additional progress has been made to prevent the wallet crashes that are causing
 the corrupted databases, for example removing the Trading Window (explained below)
 and fixing several other minor memory leaks that were inherited from the version
-of Bitcoin that Helium was forked from.
+of Bitcoin that Securus was forked from.
 
 RPC Changes
 -----------

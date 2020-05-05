@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The Helium developers
+// Copyright (c) 2018 The Securus developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -53,7 +53,7 @@ using namespace std;
 using namespace libzerocoin;
 
 #if defined(NDEBUG)
-#error "Helium cannot be compiled without assertions."
+#error "Securus cannot be compiled without assertions."
 #endif
 
 /**
@@ -971,7 +971,7 @@ bool ContextualCheckZerocoinSpend(const CTransaction& tx, const CoinSpend& spend
         return error("%s : zHLM spend with serial %s is already in block %d\n", __func__,
                      spend.getCoinSerialNumber().GetHex(), nHeightTx);
 
-    /* NOTE: GJH Inappropriate for Helium
+    /* NOTE: GJH Inappropriate for Securus
     //Reject serial's that are not in the acceptable value range
     bool fUseV1Params = spend.getVersion() < libzerocoin::PrivateCoin::PUBKEY_VERSION;
     if (pindex->nHeight > Params().Zerocoin_Block_EnforceSerialRange() &&
@@ -1317,7 +1317,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState& state, const CTransa
                     return false;
                 }
 
-                /* NOTE: GJH inappropriate for Helium
+                /* NOTE: GJH inappropriate for Securus
                 //Check for invalid/fraudulent inputs
                 if (!ValidOutPoint(txin.prevout, chainActive.Height())) {
                     return state.Invalid(error("%s : tried to spend invalid input %s in tx %s", __func__, txin.prevout.ToString(),
@@ -1541,7 +1541,7 @@ bool AcceptableInputs(CTxMemPool& pool, CValidationState& state, const CTransact
                     return false;
                 }
 
-                /* NOTE: GJH inappropriate for Helium
+                /* NOTE: GJH inappropriate for Securus
                 // check for invalid/fraudulent inputs
                 if (!ValidOutPoint(txin.prevout, chainActive.Height())) {
                     return state.Invalid(error("%s : tried to spend invalid input %s in tx %s", __func__, txin.prevout.ToString(),
@@ -2058,7 +2058,7 @@ bool CScriptCheck::operator()()
     return true;
 }
 
-/* NOTE: GJH inappropriate for Helium
+/* NOTE: GJH inappropriate for Securus
 CBitcoinAddress addressExp1("DQZzqnSR6PXxagep1byLiRg9ZurCZ5KieQ");
 CBitcoinAddress addressExp2("DTQYdnNqKuEHXyNeeYhPQGGGdqHbXYwjpj");
 
@@ -2110,7 +2110,7 @@ void AddInvalidSpendsToMap(const CBlock& block)
 }
 */
 
-/* NOTE: GJH inappropriate for Helium
+/* NOTE: GJH inappropriate for Securus
 bool ValidOutPoint(const COutPoint out, int nHeight)
 {
     bool isInvalid = nHeight >= Params().Block_Enforce_Invalid() && invalid_out::ContainsOutPoint(out);
@@ -2404,7 +2404,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("helium-scriptch");
+    RenameThread("securus-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2523,7 +2523,7 @@ bool RecalculatePIVSupply(int nHeightStart)
         if (pindex->nHeight == Params().Zerocoin_Block_RecalculateAccumulators()) {
             LogPrintf("%s : Original money supply=%s\n", __func__, FormatMoney(pindex->nMoneySupply));
 
-            /* NOTE: GJH Inappropriate for Helium
+            /* NOTE: GJH Inappropriate for Securus
             pindex->nMoneySupply += Params().InvalidAmountFiltered();
             LogPrintf("%s : Adding filtered funds to supply + %s : supply=%s\n", __func__, FormatMoney(Params().InvalidAmountFiltered()), FormatMoney(pindex->nMoneySupply));
             */
@@ -2785,7 +2785,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                 return state.DoS(100, error("ConnectBlock() : inputs missing/spent"),
                     REJECT_INVALID, "bad-txns-inputs-missingorspent");
 
-            /* NOTE: GJH inappropriate for Helium
+            /* NOTE: GJH inappropriate for Securus
             // Check that the inputs are not marked as invalid/fraudulent
             for (CTxIn in : tx.vin) {
                 if (!ValidOutPoint(in.prevout, pindex->nHeight)) {
@@ -2976,7 +2976,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     nTimeCallbacks += nTime4 - nTime3;
     LogPrint("bench", "    - Callbacks: %.2fms [%.2fs]\n", 0.001 * (nTime4 - nTime3), nTimeCallbacks * 0.000001);
 
-    /* NOTE: GJH Inappropriate for Helium
+    /* NOTE: GJH Inappropriate for Securus
     //Continue tracking possible movement of fraudulent funds until they are completely frozen
     if (pindex->nHeight >= Params().Zerocoin_Block_FirstFraudulent() && pindex->nHeight <= Params().Zerocoin_Block_RecalculateAccumulators() + 1)
         AddInvalidSpendsToMap(block);
@@ -5414,10 +5414,10 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         }
 
 	// Banned versions moving forward - Chain switch at 0.14.7
-	if (pfrom->cleanSubVer == "/Helium Core:0.14.3/" ||
-            pfrom->cleanSubVer == "/Helium Core:0.14.4/" ||
-            pfrom->cleanSubVer == "/Helium Core:0.14.5/" ||
-            pfrom->cleanSubVer == "/Helium Core:0.14.6/") {
+	if (pfrom->cleanSubVer == "/Securus Core:0.14.3/" ||
+            pfrom->cleanSubVer == "/Securus Core:0.14.4/" ||
+            pfrom->cleanSubVer == "/Securus Core:0.14.5/" ||
+            pfrom->cleanSubVer == "/Securus Core:0.14.6/") {
             LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 100); // instantly ban them because they have bad block data
             return false;

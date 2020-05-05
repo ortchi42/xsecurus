@@ -58,12 +58,12 @@
         <translation>Mottagar adresser</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Det här är dina Helium adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
+        <source>These are your Securus addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Det här är dina Securus adresser för att sända betalningar. Kontrollera alltid summan och mottagaradressen före du sänder mynt.</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Det här är dina Helium adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
+        <source>These are your Securus addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Det här är dina Securus adresser för att ta emot betalningar. Det är rekomenderat att använda en ny mottagaradress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,8 +160,8 @@
         <translation>Bekräfta plånboks krypering</translation>
     </message>
     <message>
-        <source>Helium will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HLMs from being stolen by malware infecting your computer.</source>
-        <translation>Helium kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina HLMs från att bli stulna av skadeprogram som infekterat din dator.</translation>
+        <source>Securus will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HLMs from being stolen by malware infecting your computer.</source>
+        <translation>Securus kommer att stängas ner nu för att färdigställa kryperingsprocessen. Kom ihåg att kryptering av din plånbok inte kan säkerställa dina HLMs från att bli stulna av skadeprogram som infekterat din dator.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -223,8 +223,8 @@
         <translation>BIP 38 Kryptering</translation>
     </message>
     <message>
-        <source>Enter a Helium Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Ange en Helium adress som du vill kryptera med BIP 38.
+        <source>Enter a Securus Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Ange en Securus adress som du vill kryptera med BIP 38.
 Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den krypterade privata nyckeln.</translation>
     </message>
     <message>
@@ -232,8 +232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Adress:</translation>
     </message>
     <message>
-        <source>The Helium address to sign the message with</source>
-        <translation>Helium adressen för signera meddelandet med</translation>
+        <source>The Securus address to sign the message with</source>
+        <translation>Securus adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -264,8 +264,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna Helium adress</translation>
+        <source>Sign the message to prove you own this Securus address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna Securus adress</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -288,12 +288,12 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Ange BIP 38 krypterade privata nyckeln. Ange lösenfrasen i med mittersta boxen. Tryck på krypetra nyckel för att beräkna den privata nyckeln. Efter att nyckeln är avkrypterad, Tryck på 'Importera Adress' kommer att lägga till denna privata nyckel till plånboken.</translation>
     </message>
     <message>
-        <source>The Helium address the message was signed with</source>
-        <translation>Helium adressen meddelandet blev signerat med</translation>
+        <source>The Securus address the message was signed with</source>
+        <translation>Securus adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Helium address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Helium adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified Securus address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Securus adressen.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -583,16 +583,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>flik vertygsrad</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Kärna</translation>
+        <source>Securus Core</source>
+        <translation>Securus Kärna</translation>
     </message>
     <message>
-        <source>Send coins to a Helium address</source>
-        <translation>Skicka mynt till en Helium adress</translation>
+        <source>Send coins to a Securus address</source>
+        <translation>Skicka mynt till en Securus adress</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and helium: URIs)</source>
-        <translation>Begär betalning (genererar QR kod och helium: URls)</translation>
+        <source>Request payments (generates QR codes and securus: URIs)</source>
+        <translation>Begär betalning (genererar QR kod och securus: URls)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -603,24 +603,24 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Utforska masternoder</translation>
     </message>
     <message>
-        <source>&amp;About Helium Core</source>
-        <translation>Om Helium Kärnan</translation>
+        <source>&amp;About Securus Core</source>
+        <translation>Om Securus Kärnan</translation>
     </message>
     <message>
-        <source>Show information about Helium Core</source>
-        <translation>Visa information om Helium Kärnan</translation>
+        <source>Show information about Securus Core</source>
+        <translation>Visa information om Securus Kärnan</translation>
     </message>
     <message>
-        <source>Modify configuration options for Helium</source>
-        <translation>Ändra konfigurationsval för Helium</translation>
+        <source>Modify configuration options for Securus</source>
+        <translation>Ändra konfigurationsval för Securus</translation>
     </message>
     <message>
-        <source>Sign messages with your Helium addresses to prove you own them</source>
-        <translation>Signera meddelanden med din Helium adress för att visa att du äger dem</translation>
+        <source>Sign messages with your Securus addresses to prove you own them</source>
+        <translation>Signera meddelanden med din Securus adress för att visa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Helium addresses</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Helium adressen.</translation>
+        <source>Verify messages to ensure they were signed with specified Securus addresses</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Securus adressen.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -631,8 +631,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kryptera och avkryptera privata nycklar genom användning av lösenfras</translation>
     </message>
     <message>
-        <source>Helium Core client</source>
-        <translation>Helium kärn klient</translation>
+        <source>Securus Core client</source>
+        <translation>Securus kärn klient</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -837,15 +837,15 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Kärna</translation>
+        <source>Securus Core</source>
+        <translation>Securus Kärna</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Kärna</translation>
+        <source>Securus Core</source>
+        <translation>Securus Kärna</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1157,8 +1157,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Helium address to sign the message with</source>
-        <translation>Helium adressen för signera meddelandet med</translation>
+        <source>The Securus address to sign the message with</source>
+        <translation>Securus adressen för signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1181,16 +1181,16 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
         <translation>Kopiera den nuvarande signaturen till systemets urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna Helium adress</translation>
+        <source>Sign the message to prove you own this Securus address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna Securus adress</translation>
     </message>
     <message>
-        <source>The Helium address the message was signed with</source>
-        <translation>Helium adressen meddelandet blev signerat med</translation>
+        <source>The Securus address the message was signed with</source>
+        <translation>Securus adressen meddelandet blev signerat med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Helium address</source>
-        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Helium adressen.</translation>
+        <source>Verify the message to ensure it was signed with the specified Securus address</source>
+        <translation>Verifiera meddelandet för att säkerställa att de blev signerat med den specifika Securus adressen.</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1232,8 +1232,8 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Kärna</translation>
+        <source>Securus Core</source>
+        <translation>Securus Kärna</translation>
     </message>
     </context>
 <context>
@@ -1416,10 +1416,10 @@ Ange en lösenfras i den mellersta boxen. Tryck kryptera för att beräkna den k
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>ZSecurusControlDialog</name>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>securus-core</name>
     <message>
         <source>Error</source>
         <translation>Fel</translation>

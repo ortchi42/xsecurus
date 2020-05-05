@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The Helium developers
+// Copyright (c) 2018 The Securus developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -48,10 +48,10 @@ static bool AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || mapArgs.count("-?") || mapArgs.count("-help")) {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Helium Core helium-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("Securus Core securus-tx utility version") + " " + FormatFullVersion() + "\n\n" +
                                _("Usage:") + "\n" +
-                               "  helium-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded helium transaction") + "\n" +
-                               "  helium-tx [options] -create [commands]   " + _("Create hex-encoded helium transaction") + "\n" +
+                               "  securus-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded securus transaction") + "\n" +
+                               "  securus-tx [options] -create [commands]   " + _("Create hex-encoded securus transaction") + "\n" +
                                "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

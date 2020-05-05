@@ -354,12 +354,12 @@
         <translation>A&amp;juda</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Securus Core</source>
+        <translation>Securus Core</translation>
     </message>
     <message>
-        <source>&amp;About Helium Core</source>
-        <translation>&amp;Sobre Helium Core</translation>
+        <source>&amp;About Securus Core</source>
+        <translation>&amp;Sobre Securus Core</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -552,12 +552,12 @@
         <translation>versió</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Securus Core</source>
+        <translation>Securus Core</translation>
     </message>
     <message>
-        <source>About Helium Core</source>
-        <translation>Sobre Helium Core</translation>
+        <source>About Securus Core</source>
+        <translation>Sobre Securus Core</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -575,12 +575,12 @@
         <translation>Benvingut</translation>
     </message>
     <message>
-        <source>Welcome to Helium Core.</source>
-        <translation>Benvingut a Helium Core.</translation>
+        <source>Welcome to Securus Core.</source>
+        <translation>Benvingut a Securus Core.</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Securus Core</source>
+        <translation>Securus Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1147,8 +1147,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Securus Core</source>
+        <translation>Securus Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -1307,10 +1307,10 @@
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>ZSecurusControlDialog</name>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>securus-core</name>
     <message>
         <source>Error</source>
         <translation>Error</translation>

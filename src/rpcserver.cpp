@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The Helium developers
+// Copyright (c) 2018 The Securus developers
 
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -265,11 +265,11 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Helium server.");
+            "\nStop Securus server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "Helium server stopping";
+    return "Securus server stopping";
 }
 
 
@@ -354,36 +354,36 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
         /* PIVX features */
-        {"helium", "masternode", &masternode, true, true, false},
-        {"helium", "listmasternodes", &listmasternodes, true, true, false},
-        {"helium", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"helium", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"helium", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
-        {"helium", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
-        {"helium", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
-        {"helium", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"helium", "masternodedebug", &masternodedebug, true, true, false},
-        {"helium", "startmasternode", &startmasternode, true, true, false},
-        {"helium", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"helium", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"helium", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"helium", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"helium", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"helium", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"helium", "mnbudget", &mnbudget, true, true, false},
-        {"helium", "preparebudget", &preparebudget, true, true, false},
-        {"helium", "submitbudget", &submitbudget, true, true, false},
-        {"helium", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"helium", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"helium", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"helium", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"helium", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"helium", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"helium", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"helium", "checkbudgets", &checkbudgets, true, true, false},
-        {"helium", "mnsync", &mnsync, true, true, false},
-        {"helium", "spork", &spork, true, true, false},
-        {"helium", "getpoolinfo", &getpoolinfo, true, true, false},
+        {"securus", "masternode", &masternode, true, true, false},
+        {"securus", "listmasternodes", &listmasternodes, true, true, false},
+        {"securus", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"securus", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"securus", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
+        {"securus", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
+        {"securus", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
+        {"securus", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"securus", "masternodedebug", &masternodedebug, true, true, false},
+        {"securus", "startmasternode", &startmasternode, true, true, false},
+        {"securus", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"securus", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"securus", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"securus", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"securus", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"securus", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"securus", "mnbudget", &mnbudget, true, true, false},
+        {"securus", "preparebudget", &preparebudget, true, true, false},
+        {"securus", "submitbudget", &submitbudget, true, true, false},
+        {"securus", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"securus", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"securus", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"securus", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"securus", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"securus", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"securus", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"securus", "checkbudgets", &checkbudgets, true, true, false},
+        {"securus", "mnsync", &mnsync, true, true, false},
+        {"securus", "spork", &spork, true, true, false},
+        {"securus", "getpoolinfo", &getpoolinfo, true, true, false},
 
 #ifdef ENABLE_WALLET
         /* Wallet */
@@ -618,7 +618,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> helium-cli " + methodname + " " + args + "\n";
+    return "> securus-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

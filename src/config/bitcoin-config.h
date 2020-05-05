@@ -284,16 +284,16 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "www.heliumchain.org"
+#define PACKAGE_BUGREPORT "www.securuschain.org"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Helium Core"
+#define PACKAGE_NAME "Securus Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Helium Core 0.15.2"
+#define PACKAGE_STRING "Securus Core 0.15.2"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "helium"
+#define PACKAGE_TARNAME "securus"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""

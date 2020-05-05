@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The Helium developers
+// Copyright (c) 2018 The Securus developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -122,15 +122,15 @@ public:
         pchMessageStart[3] = 0xe9;
         vAlertPubKey = ParseHex("0x"); // Disabled
         nDefaultPort = 14501;
-        bnProofOfWorkLimit = ~uint256(0) >> 20; // Helium starting difficulty is 1 / 2^12
+        bnProofOfWorkLimit = ~uint256(0) >> 20; // Securus starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210240;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 750;
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 1 * 60 * 60; // Helium: 1 day
-        nTargetSpacing = 60;  // Helium: 1 minute
+        nTargetTimespan = 1 * 60 * 60; // Securus: 1 day
+        nTargetSpacing = 60;  // Securus: 1 minute
         nMaturity = 20;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 100000000 * COIN;
@@ -201,17 +201,17 @@ public:
         vSeeds.push_back(CDNSSeedData("peer2", "xscr2.genesisblock.eu"));
         vSeeds.push_back(CDNSSeedData("peer3", "xscr3.genesisblock.eu"));
 	
-        // Helium addresses start with 'X'
+        // Securus addresses start with 'X'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,75);
-        // Helium script addresses start with '3'
+        // Securus script addresses start with '3'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
-        // Helium private keys start with '7' (uncompressed) or 'V' (compressed)
+        // Securus private keys start with '7' (uncompressed) or 'V' (compressed)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,191);
-        // Helium BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
+        // Securus BIP32 pubkeys start with 'xpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
-        // Helium BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
+        // Securus BIP32 prvkeys start with 'xprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        // Helium BIP44 coin type (pending BIP44-capable wallet, use Bitcoin type)
+        // Securus BIP44 coin type (pending BIP44-capable wallet, use Bitcoin type)
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0xe2).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
@@ -271,15 +271,15 @@ public:
         pchMessageStart[2] = 0x65;
         pchMessageStart[3] = 0xba;
         vAlertPubKey = ParseHex("");
-        bnProofOfWorkLimit = ~uint256(0) >> 1; // 0x207fffff, Helium testnet starting difficulty
+        bnProofOfWorkLimit = ~uint256(0) >> 1; // 0x207fffff, Securus testnet starting difficulty
         nSubsidyHalvingInterval = 210240;
         nDefaultPort = 14503;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Helium: 1 day
-        nTargetSpacing = 60;  // Helium: 1 minute
+        nTargetTimespan = 24 * 60 * 60; // Securus: 1 day
+        nTargetSpacing = 60;  // Securus: 1 minute
         nLastPOWBlock = 400;
         nMaturity = 15;
         nMasternodeCountDrift = 2;
@@ -336,22 +336,22 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 	
-        // vSeeds.push_back(CDNSSeedData("heliumlabs", "seed.heliumlabs.org"));
-        // vSeeds.push_back(CDNSSeedData("Spread", "node.heliumcha.in"));
+        // vSeeds.push_back(CDNSSeedData("securuslabs", "seed.securuslabs.org"));
+        // vSeeds.push_back(CDNSSeedData("Spread", "node.securuscha.in"));
 	    // vSeeds.push_back(CDNSSeedData("Kserv", "149.28.242.177"));
 	    // vSeeds.push_back(CDNSSeedData("Xojserv", "45.63.83.41"));
 
-        // Testnet Helium addresses start with 'm' or 'n'
+        // Testnet Securus addresses start with 'm' or 'n'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
-        // Testnet Helium script addresses start with '2'
+        // Testnet Securus script addresses start with '2'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
         // Testnet private keys start with '9' (uncompressed) or 'c' (compressed)
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
-        // Testnet Helium BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
+        // Testnet Securus BIP32 pubkeys start with 'tpub' (Bitcoin defaults)
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Helium BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
+        // Testnet Securus BIP32 prvkeys start with 'tprv' (Bitcoin defaults)
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        // Testnet Helium BIP44 coin type is '1' (All coin's testnet default)
+        // Testnet Securus BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE]  = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
@@ -398,8 +398,8 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Helium: 1 day
-        nTargetSpacing = 60;  // Helium: 1 minute
+        nTargetTimespan = 24 * 60 * 60; // Securus: 1 day
+        nTargetSpacing = 60;  // Securus: 1 minute
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nDefaultPort = 14505;
 

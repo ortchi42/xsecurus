@@ -10,8 +10,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between helium-cli and heliumd)
- * of a given instance of the Helium system.
+ * CBaseChainParams defines the base parameters (shared between securus-cli and securusd)
+ * of a given instance of the Securus system.
  */
 class CBaseChainParams
 {

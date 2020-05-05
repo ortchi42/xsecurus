@@ -505,7 +505,7 @@ void PrivacyDialog::sendzPIV()
 
     CAmount nValueOut = 0;
     for (const CTxOut& txout: wtxNew.vout) {
-        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " Helium, ";
+        strStats += tr("value out: ") + FormatMoney(txout.nValue).c_str() + " Securus, ";
         nValueOut += txout.nValue;
 
         strStats += tr("address: ");

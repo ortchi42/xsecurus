@@ -62,12 +62,12 @@
         <translation>Adresy pro přijetí peněz</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto jsou Vaše Helium adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
+        <source>These are your Securus addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto jsou Vaše Securus adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto jsou Vaše Helium adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
+        <source>These are your Securus addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto jsou Vaše Securus adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Potvrdit zašifrování peněženky</translation>
     </message>
     <message>
-        <source>Helium will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HLMs from being stolen by malware infecting your computer.</source>
-        <translation>Helium se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše HLMy před krádží, pokud je Váš počítač infikován malwarem.</translation>
+        <source>Securus will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HLMs from being stolen by malware infecting your computer.</source>
+        <translation>Securus se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše HLMy před krádží, pokud je Váš počítač infikován malwarem.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Šifrovat</translation>
     </message>
     <message>
-        <source>Enter a Helium Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Zadejte Helium adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
+        <source>Enter a Securus Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Zadejte Securus adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresa:</translation>
     </message>
     <message>
-        <source>The Helium address to sign the message with</source>
-        <translation>Helium adresa pro podepsání zprávy</translation>
+        <source>The Securus address to sign the message with</source>
+        <translation>Securus adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Helium adresu</translation>
+        <source>Sign the message to prove you own this Securus address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Securus adresu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Vložte BIP 38 šifrovaný privítní klíc. Frázové heslo vložte do prostředního boxu. Kliknětě na Dešifrovat Klíč pro výpočet privátního klíče. Poté co bude klíč dešifrován, kliknutím na 'Importovat Adresu' přidáte privátní klíč do Vaší peněženky.</translation>
     </message>
     <message>
-        <source>The Helium address the message was signed with</source>
-        <translation>Helium adresa zprávy byla podpsána</translation>
+        <source>The Securus address the message was signed with</source>
+        <translation>Securus adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Helium address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Helium adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Securus address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Securus adresou</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,16 +598,16 @@
         <translation>Nástrojová lišta záložek</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Securus Core</source>
+        <translation>Securus Core</translation>
     </message>
     <message>
-        <source>Send coins to a Helium address</source>
-        <translation>Odeslat platbuna Helium adresu</translation>
+        <source>Send coins to a Securus address</source>
+        <translation>Odeslat platbuna Securus adresu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and helium: URIs)</source>
-        <translation>Vyžádat platbu (generování QK kódu a helium: URIs)</translation>
+        <source>Request payments (generates QR codes and securus: URIs)</source>
+        <translation>Vyžádat platbu (generování QK kódu a securus: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -618,24 +618,24 @@
         <translation>Procházet masternody</translation>
     </message>
     <message>
-        <source>&amp;About Helium Core</source>
-        <translation>&amp;O Helium Core</translation>
+        <source>&amp;About Securus Core</source>
+        <translation>&amp;O Securus Core</translation>
     </message>
     <message>
-        <source>Show information about Helium Core</source>
-        <translation>Zobraz informace o Helium Core</translation>
+        <source>Show information about Securus Core</source>
+        <translation>Zobraz informace o Securus Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Helium</source>
-        <translation>Upravit možnosti konfigurace pro Helium</translation>
+        <source>Modify configuration options for Securus</source>
+        <translation>Upravit možnosti konfigurace pro Securus</translation>
     </message>
     <message>
-        <source>Sign messages with your Helium addresses to prove you own them</source>
-        <translation>Podepsat zprávy Vaší Helium adresou pro prokázaní, že jste jejich vlastníkem</translation>
+        <source>Sign messages with your Securus addresses to prove you own them</source>
+        <translation>Podepsat zprávy Vaší Securus adresou pro prokázaní, že jste jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Helium addresses</source>
-        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými Helium adresami</translation>
+        <source>Verify messages to ensure they were signed with specified Securus addresses</source>
+        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými Securus adresami</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Otevřít Masternodový konfigurační soubor</translation>
     </message>
     <message>
-        <source>Open a Helium: URI or payment request</source>
-        <translation>Otevřít Helium: URI nebo platební žádost</translation>
+        <source>Open a Securus: URI or payment request</source>
+        <translation>Otevřít Securus: URI nebo platební žádost</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Okno blokového průzkumníka</translation>
     </message>
     <message>
-        <source>Show the Helium Core help message to get a list with possible Helium command-line options</source>
-        <translation>Zobrazit Helium Core pomocnou zpráv pro získání seznamu možných parametrů Helium pro příkazy do příkazové řádky</translation>
+        <source>Show the Securus Core help message to get a list with possible Securus command-line options</source>
+        <translation>Zobrazit Securus Core pomocnou zpráv pro získání seznamu možných parametrů Securus pro příkazy do příkazové řádky</translation>
     </message>
     <message>
-        <source>Helium Core client</source>
-        <translation>Helium Core klient</translation>
+        <source>Securus Core client</source>
+        <translation>Securus Core klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -809,8 +809,8 @@ MultiSend: %1</translation>
         <translation>TextPopisku</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (helium.conf).</source>
-        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (helium.conf) txindex=1.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (securus.conf).</source>
+        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (securus.conf) txindex=1.</translation>
     </message>
 </context>
 <context>
@@ -1066,8 +1066,8 @@ MultiSend: %1</translation>
         <translation>Upravit adresu k odeslání platby</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Helium address.</source>
-        <translation>Zadaná adresa "%1" není validní Helium adresa.</translation>
+        <source>The entered address "%1" is not a valid Securus address.</source>
+        <translation>Zadaná adresa "%1" není validní Securus adresa.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1112,12 +1112,12 @@ MultiSend: %1</translation>
         <translation>verze</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Securus Core</source>
+        <translation>Securus Core</translation>
     </message>
     <message>
-        <source>About Helium Core</source>
-        <translation>O Helium Core</translation>
+        <source>About Securus Core</source>
+        <translation>O Securus Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1151,16 +1151,16 @@ MultiSend: %1</translation>
         <translation>Vítejte</translation>
     </message>
     <message>
-        <source>Welcome to Helium Core.</source>
-        <translation>Vítejte v Helium Core.</translation>
+        <source>Welcome to Securus Core.</source>
+        <translation>Vítejte v Securus Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Helium Core will store its data.</source>
-        <translation>Při prvním spuštění programu si můžete vybrat, kam bude Helium Core ukládat svá data.</translation>
+        <source>As this is the first time the program is launched, you can choose where Securus Core will store its data.</source>
+        <translation>Při prvním spuštění programu si můžete vybrat, kam bude Securus Core ukládat svá data.</translation>
     </message>
     <message>
-        <source>Helium Core will download and store a copy of the Helium block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Helium Core stáhne a uloží kopii Helium blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
+        <source>Securus Core will download and store a copy of the Securus block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Securus Core stáhne a uloží kopii Securus blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1171,8 +1171,8 @@ MultiSend: %1</translation>
         <translation>Použít vlastní složku pro data</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Securus Core</source>
+        <translation>Securus Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1520,12 +1520,12 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Helium after logging in to the system.</source>
-        <translation>Automaticky spustit Helium po přihlášení do systému</translation>
+        <source>Automatically start Securus after logging in to the system.</source>
+        <translation>Automaticky spustit Securus po přihlášení do systému</translation>
     </message>
     <message>
-        <source>&amp;Start Helium on system login</source>
-        <translation>&amp;Spusti Helium při přihlášení do systému</translation>
+        <source>&amp;Start Securus on system login</source>
+        <translation>&amp;Spusti Securus při přihlášení do systému</translation>
     </message>
     <message>
         <source>Show Masternodes Tab</source>
@@ -2186,8 +2186,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Helium address to sign the message with</source>
-        <translation>Helium adresa pro podepsání zprávy</translation>
+        <source>The Securus address to sign the message with</source>
+        <translation>Securus adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2214,16 +2214,16 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Helium adresu</translation>
+        <source>Sign the message to prove you own this Securus address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Securus adresu</translation>
     </message>
     <message>
-        <source>The Helium address the message was signed with</source>
-        <translation>Helium adresa zprávy byla podpsána</translation>
+        <source>The Securus address the message was signed with</source>
+        <translation>Securus adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Helium address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Helium adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Securus address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Securus adresou</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2265,8 +2265,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>Securus Core</source>
+        <translation>Securus Core</translation>
     </message>
     </context>
 <context>
@@ -2369,14 +2369,14 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>ZSecurusControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>
     </message>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>securus-core</name>
     <message>
         <source>Error</source>
         <translation>Chyba</translation>

@@ -11,7 +11,7 @@ def chunks(data, SIZE=10000):
     for i in range(0, len(data), SIZE):
         yield {k:data[k] for k in islice(it, SIZE)}
 
-# replace rpcuser and rpcpassword values for your local node to match helium.conf
+# replace rpcuser and rpcpassword values for your local node to match securus.conf
 rpc_connection = AuthServiceProxy("http://%s:%s@%s:%s" % ('rpcuser', 'rpcpassword', '127.0.0.1', '14502'))
 print(rpc_connection.getbalance())
 
