@@ -129,7 +129,7 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 24 * 60 * 60; // Helium: 1 day
+        nTargetTimespan = 1 * 60 * 60; // Helium: 1 day
         nTargetSpacing = 60;  // Helium: 1 minute
         nMaturity = 20;
         nMasternodeCountDrift = 20;
@@ -152,20 +152,20 @@ public:
         nEnforceNewSporkKey = 1537963200; // (PIVX: 1525158000) //!> Sporks signed after (GMT): Wednesday, September 26,2018 12:00 PM must use the new spork key
         nRejectOldSporkKey = 1537966800; // (PIVX: 1527811200) //!> Fully reject old spork key after (GMT): Wednesday, September 26,2018 12:00 PM
 
-        const char* pszTimestamp = "Bitcoin Block #540723:  000000000000000000200b9c401b3022de17cd305ba6ef9ce5bade07f9f5ebe5";
+        const char* pszTimestamp = "XSECURUS - 16.03.2020 - COVID-19 everywhere ... ";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
-        txNew.vin[0].scriptSig = CScript() << 504365040 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
+        txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 1 * COIN;
         txNew.vout[0].scriptPubKey = CScript() << ParseHex("") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 4;
-        genesis.nTime = 1535104494;
-        genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 6846;
+        genesis.nTime = 1584392500;
+        genesis.nBits = 0x207fffff;
+        genesis.nNonce = 9781;
 
         hashGenesisBlock = genesis.GetHash();
         if (regenerate) {
@@ -193,20 +193,16 @@ public:
             LogPrintf(" time: %u\n", genesis.nTime);
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
-            assert(hashGenesisBlock == uint256("0x0000033346b0b31697bcd178789fe1d6d10f96a7fd46d74fbf647d5ea3757348"));
-            assert(genesis.hashMerkleRoot == uint256("0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd"));
+            assert(hashGenesisBlock == uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
+            assert(genesis.hashMerkleRoot == uint256("0x9b7192f263c8ecc6a52e816324933f2a93e81749d87eaa8b798516c2c67b5759"))
         }
-        // Mainnet --- nonce: 6846 time: 1535104494 hash: 0x0000033346b0b31697bcd178789fe1d6d10f96a7fd46d74fbf647d5ea3757348 merklehash: 0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd
-
-        // vSeeds.push_back(CDNSSeedData("knout", "dnsseed.helium.cl"));
-        // vSeeds.push_back(CDNSSeedData("seed1", "s1.heliumcoin.info"));
-	    // vSeeds.push_back(CDNSSeedData("seed2", "s2.heliumcoin.info"));
-	    // vSeeds.push_back(CDNSSeedData("seed3", "s3.heliumcoin.info"));
-	    // vSeeds.push_back(CDNSSeedData("seed4", "s4.heliumcoin.info"));
-        // vSeeds.push_back(CDNSSeedData("seed5", "s5.heliumcoin.info"));
+         
+        vSeeds.push_back(CDNSSeedData("peer1", "xscr1.genesisblock.eu"));
+        vSeeds.push_back(CDNSSeedData("peer2", "xscr2.genesisblock.eu"));
+        vSeeds.push_back(CDNSSeedData("peer3", "xscr3.genesisblock.eu"));
 	
-        // Helium addresses start with 'S'
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);
+        // Helium addresses start with 'X'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,75);
         // Helium script addresses start with '3'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
         // Helium private keys start with '7' (uncompressed) or 'V' (compressed)
@@ -232,7 +228,7 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "0429929bc9edbbdbee4830f004d0265608fbcc4caa9feff1fe58ff97354ddcf125b1c1636663d3f447d6c29d7b04bcb6fc492d2955c567be65ecb63fa2cbe2ce36";
         strSporkKeyOld = "04beb92bb57470a4e6b011a291026c8cb6ce59c20b36ae5128d88b723c198443cb35cb2609eb9054f9fc49aa9f49257026cd1a09afb3fd7e1429086ab708ffb482";
-        strObfuscationPoolDummyAddress = "S87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
+        strObfuscationPoolDummyAddress = "XCAJDt2LSsxmxJ9bLRFvbHunMVU56WjxSE";
         nStartMasternodePayments = 1527634800; // 2018-05-30 00:00:00
 
         /** Zerocoin */
@@ -270,14 +266,14 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0xf0;
-        pchMessageStart[1] = 0xa0;
-        pchMessageStart[2] = 0x0c;
-        pchMessageStart[3] = 0x0e;
+        pchMessageStart[0] = 0x82;
+        pchMessageStart[1] = 0x76;
+        pchMessageStart[2] = 0x65;
+        pchMessageStart[3] = 0xba;
         vAlertPubKey = ParseHex("");
         bnProofOfWorkLimit = ~uint256(0) >> 1; // 0x207fffff, Helium testnet starting difficulty
         nSubsidyHalvingInterval = 210240;
-        nDefaultPort = 114501;
+        nDefaultPort = 14503;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -340,10 +336,10 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 	
-        vSeeds.push_back(CDNSSeedData("heliumlabs", "seed.heliumlabs.org"));
-        vSeeds.push_back(CDNSSeedData("Spread", "node.heliumcha.in"));
-	vSeeds.push_back(CDNSSeedData("Kserv", "149.28.242.177"));
-	vSeeds.push_back(CDNSSeedData("Xojserv", "45.63.83.41"));
+        // vSeeds.push_back(CDNSSeedData("heliumlabs", "seed.heliumlabs.org"));
+        // vSeeds.push_back(CDNSSeedData("Spread", "node.heliumcha.in"));
+	    // vSeeds.push_back(CDNSSeedData("Kserv", "149.28.242.177"));
+	    // vSeeds.push_back(CDNSSeedData("Xojserv", "45.63.83.41"));
 
         // Testnet Helium addresses start with 'm' or 'n'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
