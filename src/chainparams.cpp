@@ -194,7 +194,7 @@ public:
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
             assert(hashGenesisBlock == uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
-            assert(genesis.hashMerkleRoot == uint256("0x9b7192f263c8ecc6a52e816324933f2a93e81749d87eaa8b798516c2c67b5759"))
+            assert(genesis.hashMerkleRoot == uint256("0x9b7192f263c8ecc6a52e816324933f2a93e81749d87eaa8b798516c2c67b5759"));
         }
          
         vSeeds.push_back(CDNSSeedData("peer1", "xscr1.genesisblock.eu"));
