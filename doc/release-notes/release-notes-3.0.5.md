@@ -13,7 +13,7 @@ Please report bugs using the issue tracker at github:
 Mandatory Update
 ==============
 
-Securus Core v3.0.5 is a mandatory update for all users. This release contains various updates/fixes pertaining to the zHLM protocol, supply tracking, block transmission and relaying, as well as usability and quality-of-life updates to the GUI. Users are required to update before block `908000` which is when the accumulators will be refactored. Shortly after that block, zHLM transactions will be enabled. **When zHLM is enabled, autominting will also be enabled.** If you would like to disable automatic conversion of 10% of your PIV balance to zHLM, then you will need to add `enablezeromint=0` to your `securus.conf` file. For information about where to find your securus.conf you can visit this link from [Securus Support](https://securus.freshdesk.com/support/solutions/articles/30000004664-where-are-my-wallet-dat-blockchain-and-configuration-conf-files-located-).
+Securus Core v3.0.5 is a mandatory update for all users. This release contains various updates/fixes pertaining to the zXSCR protocol, supply tracking, block transmission and relaying, as well as usability and quality-of-life updates to the GUI. Users are required to update before block `908000` which is when the accumulators will be refactored. Shortly after that block, zXSCR transactions will be enabled. **When zXSCR is enabled, autominting will also be enabled.** If you would like to disable automatic conversion of 10% of your PIV balance to zXSCR, then you will need to add `enablezeromint=0` to your `securus.conf` file. For information about where to find your securus.conf you can visit this link from [Securus Support](https://securus.freshdesk.com/support/solutions/articles/30000004664-where-are-my-wallet-dat-blockchain-and-configuration-conf-files-located-).
 
 Users will have a grace period to update their clients before versions prior to this release are no longer allowed to connect to this (and future) version(s).
 
@@ -48,23 +48,23 @@ Notable Changes
 
 Accumulator Code Refactor
 ---------------------
-The zHLM accumulator code has undergone a major refactor. Accumulators are one of the most essential components of the zerocoin protocol, and also one of the most computationally expensive parts of the protocol. This refactoring speeds up syncing and spending of zHLM by over 5x. The new code also allows for spending of zHLM with only 2 required mints occurring on the network after your mint has been added, whereas before 3 were required. This refactor allows for lighter resource load and a smoother user experience.
+The zXSCR accumulator code has undergone a major refactor. Accumulators are one of the most essential components of the zerocoin protocol, and also one of the most computationally expensive parts of the protocol. This refactoring speeds up syncing and spending of zXSCR by over 5x. The new code also allows for spending of zXSCR with only 2 required mints occurring on the network after your mint has been added, whereas before 3 were required. This refactor allows for lighter resource load and a smoother user experience.
 
 libzerocoin Exploit Fix
 ---------------------
-zHLM relies on a 3rd party library called libzerocoin. All currencies that utilize the zerocoin protocol use libzerocoin, and many of those currencies have been exposed to an exploit which allowed for the creation of multiple zero-knowledge spending proofs for one single zerocoin mint. The Securus developers were able properly identify the exploit, track down any fraudulent spending proofs, link the fraudulent spending proofs with their one valid proof that they were mutated from, and remove any mints from the accumulators that were derived from the invalid spends. 
+zXSCR relies on a 3rd party library called libzerocoin. All currencies that utilize the zerocoin protocol use libzerocoin, and many of those currencies have been exposed to an exploit which allowed for the creation of multiple zero-knowledge spending proofs for one single zerocoin mint. The Securus developers were able properly identify the exploit, track down any fraudulent spending proofs, link the fraudulent spending proofs with their one valid proof that they were mutated from, and remove any mints from the accumulators that were derived from the invalid spends. 
 
-zHLM Maintenance Mode Spork
+zXSCR Maintenance Mode Spork
 ---------------------
-Handling the above noted libzerocoin exploit required the Securus team to immediately release a patched wallet to as many users as possible which rejected bad spends and also disabled all zHLM transactions in general. The process of releasing a patched wallet in such a small time frame is frustrating and difficult for all members of the Securus team and especially users of Securus. The Securus developers have added a new spork which allows for zHLM transacting to be turned on/off without having to release a patched wallet. This will allow much smoother operation if any problems occur in the future, and should also allow exchanges and 3rd party services to continue to operate even if zHLM is in maintenance mode.
+Handling the above noted libzerocoin exploit required the Securus team to immediately release a patched wallet to as many users as possible which rejected bad spends and also disabled all zXSCR transactions in general. The process of releasing a patched wallet in such a small time frame is frustrating and difficult for all members of the Securus team and especially users of Securus. The Securus developers have added a new spork which allows for zXSCR transacting to be turned on/off without having to release a patched wallet. This will allow much smoother operation if any problems occur in the future, and should also allow exchanges and 3rd party services to continue to operate even if zXSCR is in maintenance mode.
 
 Money Supply Indexing
 ---------------------
-The exploit in libzerocoin threw off some of the wallet's internal money supply calculations for both the zHLM supply and the PIV supply. User's wallet's will automatically recalculate the supply on block `908001`. User's also have the ability to recalculate supply using the startup flag `reindexmoneysupply`.
+The exploit in libzerocoin threw off some of the wallet's internal money supply calculations for both the zXSCR supply and the PIV supply. User's wallet's will automatically recalculate the supply on block `908001`. User's also have the ability to recalculate supply using the startup flag `reindexmoneysupply`.
 
-More Extensive Tracking of zHLM Supply Through RPC
+More Extensive Tracking of zXSCR Supply Through RPC
 ---------------------
-More information has been added to the `getinfo` and `getblock` RPC calls, which now display the total zHLM supply as well as the balance for each zHLM accumulator.
+More information has been added to the `getinfo` and `getblock` RPC calls, which now display the total zXSCR supply as well as the balance for each zXSCR accumulator.
 
 Multisig GUI
 ---------------------

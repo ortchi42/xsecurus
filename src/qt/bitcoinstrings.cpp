@@ -58,7 +58,7 @@ QT_TRANSLATE_NOOP("bitcoin-core", ""
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Enable SwiftX, show confirmations for locked transactions (bool, default: %s)"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
-"Enable automatic wallet backups triggered after each zHLM minting (0-1, "
+"Enable automatic wallet backups triggered after each zXSCR minting (0-1, "
 "default: %u)"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Enable spork administration functionality with the appropriate private key."),
@@ -89,10 +89,10 @@ QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Execute command when the best block changes (%s in cmd is replaced by block "
 "hash)"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
-"Fees (in HLM/Kb) smaller than this are considered zero fee for relaying "
+"Fees (in XSCR/Kb) smaller than this are considered zero fee for relaying "
 "(default: %s)"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
-"Fees (in HLM/Kb) smaller than this are considered zero fee for transaction "
+"Fees (in XSCR/Kb) smaller than this are considered zero fee for transaction "
 "creation (default: %s)"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Flush database activity from memory pool to disk log every <n> megabytes "
@@ -187,10 +187,10 @@ QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Unable to locate enough Obfuscation denominated funds for this transaction."),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Unable to locate enough Obfuscation non-denominated funds for this "
-"transaction that are not equal 10000 HLM."),
+"transaction that are not equal 10000 XSCR."),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Unable to locate enough funds for this transaction that are not equal 10000 "
-"HLM."),
+"XSCR."),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: "
 "%s)"),
@@ -305,7 +305,7 @@ QT_TRANSLATE_NOOP("bitcoin-core", "Failed to listen on any port. Use -listen=0 i
 QT_TRANSLATE_NOOP("bitcoin-core", "Failed to read block index"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Failed to read block"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Failed to write block index"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Fee (in HLM/kB) to add to transactions you send (default: %s)"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Fee (in XSCR/kB) to add to transactions you send (default: %s)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Finalizing transaction."),
 QT_TRANSLATE_NOOP("bitcoin-core", "Force safe mode (default: %u)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Found enough users, signing ( waiting %s )"),

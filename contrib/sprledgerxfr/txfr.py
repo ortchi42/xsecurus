@@ -2,7 +2,7 @@
 from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
 from itertools import islice
 import time
-# Using filtered version of address dictionary excluding Bittrex address and < 10 HLM balances
+# Using filtered version of address dictionary excluding Bittrex address and < 10 XSCR balances
 from spr_addys_filtered import spr_addys
 
 # Breaks up dictionary into chunks

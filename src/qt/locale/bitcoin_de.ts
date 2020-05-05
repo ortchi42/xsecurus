@@ -176,16 +176,16 @@
         <translation>Wallet-Verschlüsselung bestätigen</translation>
     </message>
     <message>
-        <source>Securus will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HLMs from being stolen by malware infecting your computer.</source>
-        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer HLMs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
+        <source>Securus will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XSCRs from being stolen by malware infecting your computer.</source>
+        <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer XSCRs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Sind Sie sich sicher, dass Sie ihre Wallet verschlüsseln möchten?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HLM&lt;/b&gt;!</source>
-        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre HLMs verlieren&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR XSCR&lt;/b&gt;!</source>
+        <translation>Warnung: Wenn Sie ihre Wallet verschlüsseln und Ihre Passphrase verlieren werden Sie &lt;b&gt;alle ihre XSCRs verlieren&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -618,8 +618,8 @@
         <translation>&amp;Privatsphäre</translation>
     </message>
     <message>
-        <source>Privacy Action for zHLM and Obfuscation</source>
-        <translation>Privatsphäre Aktion für zHLM und Verschleierung</translation>
+        <source>Privacy Action for zXSCR and Obfuscation</source>
+        <translation>Privatsphäre Aktion für zXSCR und Verschleierung</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -1539,32 +1539,32 @@ Bitte Adresse überprüfen und nochmals versuchen.</translation>
         <translation>Bitte den gewünschten Privatsphäre Level auswählen.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 HLM</source>
-        <translation>2 separate Masternodes verwenden um bis zu 10000 HLM zu mixen</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 XSCR</source>
+        <translation>2 separate Masternodes verwenden um bis zu 10000 XSCR zu mixen</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 HLM</source>
-        <translation>8 separate Masternodes verwenden um bis zu 10000 HLM zu mixen</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 XSCR</source>
+        <translation>8 separate Masternodes verwenden um bis zu 10000 XSCR zu mixen</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>16 separate Masternodes verwenden</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 HLM to anonymize 10000 HLM</source>
-        <translation>Diese Option ist die schnellst und kostet ungefähr ~0.025 HLM um 10000 HLM zu anonymisieren </translation>
+        <source>This option is the quickest and will cost about ~0.025 XSCR to anonymize 10000 XSCR</source>
+        <translation>Diese Option ist die schnellst und kostet ungefähr ~0.025 XSCR um 10000 XSCR zu anonymisieren </translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 HLM to anonymize 10000 HLM</source>
-        <translation>Diese Option ist angemessen schnell und kostet ungefähr  0.05 HLM um 10000 HLM zu anonymisieren</translation>
+        <source>This option is moderately fast and will cost about 0.05 XSCR to anonymize 10000 XSCR</source>
+        <translation>Diese Option ist angemessen schnell und kostet ungefähr  0.05 XSCR um 10000 XSCR zu anonymisieren</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Diese Option ist die langsamste und sicherste Option. Die Verwendung maximaler Anonymisierung kostet</translation>
     </message>
     <message>
-        <source>0.1 HLM per 10000 HLM you anonymize.</source>
-        <translation>0.1 HLM per 10000 HLM die anonymisiert werden.</translation>
+        <source>0.1 XSCR per 10000 XSCR you anonymize.</source>
+        <translation>0.1 XSCR per 10000 XSCR die anonymisiert werden.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1707,20 +1707,20 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Port mit &amp;UPnP mappen</translation>
     </message>
     <message>
-        <source>Percentage of incoming HLM which get automatically converted to zHLM via Zerocoin Protocol (min: 10%)</source>
-        <translation>Anteil des einkommenden HLM, welcher automatisch zu zHLM via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
+        <source>Percentage of incoming XSCR which get automatically converted to zXSCR via Zerocoin Protocol (min: 10%)</source>
+        <translation>Anteil des einkommenden XSCR, welcher automatisch zu zXSCR via Zerocoin Protokoll konvertiert wird (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zHLM</source>
-        <translation>Prozentsatz der automatisierten zHLM</translation>
+        <source>Percentage of autominted zXSCR</source>
+        <translation>Prozentsatz der automatisierten zXSCR</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough HLM for this denomination is available</source>
-        <translation>Warte mit automatischer Konvertierung zu Zerocoin, bis genügend HLM für diese Stückelung verfügbar ist</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough XSCR for this denomination is available</source>
+        <translation>Warte mit automatischer Konvertierung zu Zerocoin, bis genügend XSCR für diese Stückelung verfügbar ist</translation>
     </message>
     <message>
-        <source>Preferred Automint zHLM Denomination</source>
-        <translation>Bevorzugte automatisierte zHLM Stückelung </translation>
+        <source>Preferred Automint zXSCR Denomination</source>
+        <translation>Bevorzugte automatisierte zXSCR Stückelung </translation>
     </message>
     <message>
         <source>Connect to the Securus network through a SOCKS5 proxy.</source>
@@ -1854,8 +1854,8 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Formular</translation>
     </message>
     <message>
-        <source>HLM Balances</source>
-        <translation>HLM Bilanzen</translation>
+        <source>XSCR Balances</source>
+        <translation>XSCR Bilanzen</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1922,12 +1922,12 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Kombinierte Bilanz (einschließlich unreifer Coins)</translation>
     </message>
     <message>
-        <source>HLM:</source>
-        <translation>HLM:</translation>
+        <source>XSCR:</source>
+        <translation>XSCR:</translation>
     </message>
     <message>
-        <source>zHLM:</source>
-        <translation>zHLM:</translation>
+        <source>zXSCR:</source>
+        <translation>zXSCR:</translation>
     </message>
     <message>
         <source>0 %</source>
@@ -2055,12 +2055,12 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
 <context>
     <name>PrivacyDialog</name>
     <message>
-        <source>HLM which were anonymized via Zerocin Protocol</source>
-        <translation>HLM, die über das Zerocin-Protokoll anonymisiert wurden</translation>
+        <source>XSCR which were anonymized via Zerocin Protocol</source>
+        <translation>XSCR, die über das Zerocin-Protokoll anonymisiert wurden</translation>
     </message>
     <message>
-        <source>Zerocoin HLM (zHLM)</source>
-        <translation>Zerocoin HLM (zHLM)</translation>
+        <source>Zerocoin XSCR (zXSCR)</source>
+        <translation>Zerocoin XSCR (zXSCR)</translation>
     </message>
     <message>
         <source>Zerocoin Actions:</source>
@@ -2083,16 +2083,16 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>0</translation>
     </message>
     <message>
-        <source>zHLM</source>
-        <translation>zHLM</translation>
+        <source>zXSCR</source>
+        <translation>zXSCR</translation>
     </message>
     <message>
         <source>Available for Minting:</source>
         <translation>Verfügbar für Prägung:</translation>
     </message>
     <message>
-        <source>0.000 000 00 HLM</source>
-        <translation>0.000 000 00 HLM</translation>
+        <source>0.000 000 00 XSCR</source>
+        <translation>0.000 000 00 XSCR</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -2151,8 +2151,8 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Verfügbare Bilanz:</translation>
     </message>
     <message>
-        <source>0 zHLM</source>
-        <translation>0 zHLM</translation>
+        <source>0 zXSCR</source>
+        <translation>0 zXSCR</translation>
     </message>
     <message>
         <source>Security Level for Zerocoin Transactions. More is better, but needs more time and resources.</source>
@@ -2387,8 +2387,8 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Erfolgreich geprägt</translation>
     </message>
     <message>
-        <source> zHLM in </source>
-        <translation> zHLM in </translation>
+        <source> zXSCR in </source>
+        <translation> zXSCR in </translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2482,7 +2482,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>zSecurus Spend #: </source>
-        <translation>zHLM Ausgeben #:</translation>
+        <translation>zXSCR Ausgeben #:</translation>
     </message>
     <message>
         <source>denomination: </source>
@@ -3063,7 +3063,7 @@ Bitte haben Sie Geduld...</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>HLMs überweisen</translation>
+        <translation>XSCRs überweisen</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -3134,8 +3134,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>UTXO Größe:</translation>
     </message>
     <message>
-        <source>0 HLM</source>
-        <translation>0 HLM</translation>
+        <source>0 XSCR</source>
+        <translation>0 XSCR</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3186,12 +3186,12 @@ Bitte haben Sie Geduld...</translation>
         <translation>Coins automatisch ausgewählt</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uHLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uHLMs in fee,&lt;br /&gt;while "at least" pays 1000 uHLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Wenn die kundenspezifische Gebühr auf 1000 uHLMs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uHLMs an Gebühr,&lt;br /&gt;während man "mindestens" 1000 uHLMs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uXSCRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uXSCRs in fee,&lt;br /&gt;while "at least" pays 1000 uXSCRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Wenn die kundenspezifische Gebühr auf 1000 uXSCRs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uXSCRs an Gebühr,&lt;br /&gt;während man "mindestens" 1000 uXSCRs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uHLMs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uHLMs in fee,&lt;br /&gt;while "total at least" pays 1000 uHLMs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Wenn die kundenspezifische Gebühr auf 1000 uHLMs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uHLMs an Gebühr,&lt;br /&gt;während man "insgesamt mindestens" 1000 uHLMs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uXSCRs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uXSCRs in fee,&lt;br /&gt;while "total at least" pays 1000 uXSCRs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Wenn die kundenspezifische Gebühr auf 1000 uXSCRs eingestellt ist und die Transaktion nur 250 Bytes beträgt, dann zahlt man "pro Kilobyte" nur 250 uXSCRs an Gebühr,&lt;br /&gt;während man "insgesamt mindestens" 1000 uXSCRs bezahlt. Für Transaktionen, die größer sind als ein Kilobyte, bezahlen sie mit Kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Securus transactions than the network can process.</source>
@@ -3242,8 +3242,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Empfänge&amp;r hinzufügen</translation>
     </message>
     <message>
-        <source>Anonymized HLM</source>
-        <translation>Anonymisierte HLM</translation>
+        <source>Anonymized XSCR</source>
+        <translation>Anonymisierte XSCR</translation>
     </message>
     <message>
         <source>SwiftTX</source>
@@ -3817,7 +3817,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Erzeugte HLMs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine HLMs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
+        <translation>Erzeugte XSCRs müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugten, wurde er an das Netzwerk übertragen, um ihn der Blockkette hinzuzufügen. Falls dies fehlschlägt wird der Status in "nicht angenommen" geändert und Sie werden keine XSCRs gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -3963,23 +3963,23 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Converted Piv to zSecurus</source>
-        <translation>Umgewandeltes HLM zu zHLM</translation>
+        <translation>Umgewandeltes XSCR zu zXSCR</translation>
     </message>
     <message>
         <source>Spent zSecurus</source>
-        <translation>Ausgeben zHLM</translation>
+        <translation>Ausgeben zXSCR</translation>
     </message>
     <message>
         <source>Received Piv from zSecurus</source>
-        <translation>Empfangene HLM von zHLM</translation>
+        <translation>Empfangene XSCR von zXSCR</translation>
     </message>
     <message>
         <source>Minted Change as zSecurus from zSecurus Spend</source>
-        <translation>Geprägtes Wechselgeld als zHLM von zHLM Ausgabe</translation>
+        <translation>Geprägtes Wechselgeld als zXSCR von zXSCR Ausgabe</translation>
     </message>
     <message>
         <source>Converted zSecurus to Piv</source>
-        <translation>Umgewandeltes zHLM zu HLM</translation>
+        <translation>Umgewandeltes zXSCR zu XSCR</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -3987,7 +3987,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>zSecurus Accumulator</source>
-        <translation>zHLM Speicher</translation>
+        <translation>zXSCR Speicher</translation>
     </message>
     <message>
         <source>(n/a)</source>
@@ -4098,7 +4098,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Received Piv from zSecurus</source>
-        <translation>Empfangen HLM von zHLM</translation>
+        <translation>Empfangen XSCR von zXSCR</translation>
     </message>
     <message>
         <source>Zerocoin Mint</source>
@@ -4110,7 +4110,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>Zerocoin Spend, Change in zSecurus</source>
-        <translation>Zerocoin Ausgabe, Wechselgeld in zHLM</translation>
+        <translation>Zerocoin Ausgabe, Wechselgeld in zXSCR</translation>
     </message>
     <message>
         <source>Zerocoin Spend to Self</source>
@@ -4231,11 +4231,11 @@ Bitte haben Sie Geduld...</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>HLMs überweisen</translation>
+        <translation>XSCRs überweisen</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 HLM.</source>
-        <translation>SwiftTX unterstützt das Versenden von Beträgen dieser Höhe noch nicht. Transaktionen sind zur Zeit auf maximal %1 HLM begrenzt.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 XSCR.</source>
+        <translation>SwiftTX unterstützt das Versenden von Beträgen dieser Höhe noch nicht. Transaktionen sind zur Zeit auf maximal %1 XSCR begrenzt.</translation>
     </message>
 </context>
 <context>
@@ -4281,7 +4281,7 @@ Bitte haben Sie Geduld...</translation>
     <name>ZSecurusControlDialog</name>
     <message>
         <source>Select zSecurus to Spend</source>
-        <translation>Auswahl zHLM als Ausgabe</translation>
+        <translation>Auswahl zXSCR als Ausgabe</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4293,7 +4293,7 @@ Bitte haben Sie Geduld...</translation>
     </message>
     <message>
         <source>zSecurus</source>
-        <translation>zHLM</translation>
+        <translation>zXSCR</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -4379,12 +4379,12 @@ Bitte haben Sie Geduld...</translation>
         <translation>Befehl ausführen, wenn sich der beste Block ändert (%s in cmd wird durch Blockhash ersetzt)</translation>
     </message>
     <message>
-        <source>Fees (in HLM/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Gebühren (in HLM/kB) kleiner als diese gelten als Null-Gebühr für die Weiterleitung (default: %s)</translation>
+        <source>Fees (in XSCR/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Gebühren (in XSCR/kB) kleiner als diese gelten als Null-Gebühr für die Weiterleitung (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in HLM/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Gebühren (in HLM/kB) kleiner als diese werden als Null-Gebühr für die Transaktionserstellung betrachtet (default: %s)</translation>
+        <source>Fees (in XSCR/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Gebühren (in XSCR/kB) kleiner als diese werden als Null-Gebühr für die Transaktionserstellung betrachtet (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>

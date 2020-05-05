@@ -2089,7 +2089,7 @@ bool CWallet::SelectStakeCoins(std::list<std::unique_ptr<CStakeInput> >& listInp
     vector<COutput> vCoins;
     AvailableCoins(vCoins, true, NULL, false, STAKABLE_COINS);
     CAmount nAmountSelected = 0;
-    if (GetBoolArg("-hlmstake", true)) {
+    if (GetBoolArg("-xscrstake", true)) {
         for (const COutput &out : vCoins) {
             //make sure not to outrun target amount
             if (nAmountSelected + out.tx->vout[out.i].nValue > nTargetAmount)
@@ -2121,7 +2121,7 @@ bool CWallet::SelectStakeCoins(std::list<std::unique_ptr<CStakeInput> >& listInp
     }
 
     //zPIV
-    if (GetBoolArg("-zhlmstake", true) && chainActive.Height() > Params().Zerocoin_Block_V2_Start() && !IsSporkActive(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
+    if (GetBoolArg("-zxscrstake", true) && chainActive.Height() > Params().Zerocoin_Block_V2_Start() && !IsSporkActive(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
         //Only update zPIV set once per update interval
         bool fUpdate = false;
         static int64_t nTimeLastUpdate = 0;
@@ -2774,9 +2774,9 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, CAmount> >& vecSend,
                     if (coin_type == ALL_COINS) {
                         strFailReason = _("Insufficient funds.");
                     } else if (coin_type == ONLY_NOT10000IFMN) {
-                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 10000 HLM.");
+                        strFailReason = _("Unable to locate enough funds for this transaction that are not equal 10000 XSCR.");
                     } else if (coin_type == ONLY_NONDENOMINATED_NOT10000IFMN) {
-                        strFailReason = _("Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 HLM.");
+                        strFailReason = _("Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 XSCR.");
                     } else {
                         strFailReason = _("Unable to locate enough Obfuscation denominated funds for this transaction.");
                         strFailReason += " " + _("Obfuscation uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.");
@@ -4003,7 +4003,7 @@ void CWallet::AutoZeromint()
 
     // zPIV are integers > 0, so we can't mint 10% of 9 PIV
     if (nBalance < 10){
-        LogPrint("zero", "CWallet::AutoZeromint(): available balance (%ld) too small for minting zHLM\n", nBalance);
+        LogPrint("zero", "CWallet::AutoZeromint(): available balance (%ld) too small for minting zXSCR\n", nBalance);
         return;
     }
 
@@ -4012,7 +4012,7 @@ void CWallet::AutoZeromint()
 
     // Check if minting is actually needed
     if(dPercentage >= nZeromintPercentage){
-        LogPrint("zero", "CWallet::AutoZeromint() @block %ld: percentage of existing zHLM (%lf%%) already >= configured percentage (%d%%). No minting needed...\n",
+        LogPrint("zero", "CWallet::AutoZeromint() @block %ld: percentage of existing zXSCR (%lf%%) already >= configured percentage (%d%%). No minting needed...\n",
                   chainActive.Tip()->nHeight, dPercentage, nZeromintPercentage);
         return;
     }
@@ -4070,7 +4070,7 @@ void CWallet::AutoZeromint()
         nZerocoinBalance = GetZerocoinBalance(false);
         nBalance = GetUnlockedCoins();
         dPercentage = 100 * (double)nZerocoinBalance / (double)(nZerocoinBalance + nBalance);
-        LogPrintf("CWallet::AutoZeromint() @ block %ld: successfully minted %ld zHLM. Current percentage of zHLM: %lf%%\n",
+        LogPrintf("CWallet::AutoZeromint() @ block %ld: successfully minted %ld zXSCR. Current percentage of zXSCR: %lf%%\n",
                   chainActive.Tip()->nHeight, nMintAmount, dPercentage);
         // Re-adjust startup time to delay next Automint for 5 minutes
         nStartupTime = GetAdjustedTime();
@@ -4612,7 +4612,7 @@ bool CWallet::MintToTxIn(CZerocoinMint zerocoinSelected, int nSecurityLevel, con
     if (nVersion >= libzerocoin::PrivateCoin::PUBKEY_VERSION) {
         CKey key;
         if (!zerocoinSelected.GetKeyPair(key))
-            return error("%s: failed to set zHLM privkey mint version=%d", __func__, nVersion);
+            return error("%s: failed to set zXSCR privkey mint version=%d", __func__, nVersion);
 
         privateCoin.setPrivKey(key.GetPrivKey());
     }
@@ -4709,7 +4709,7 @@ bool CWallet::CreateZerocoinSpendTransaction(CAmount nValue, int nSecurityLevel,
     }
 
     if (nValue < 1) {
-        receipt.SetStatus(_("Value is below the smallest available denomination (= 1) of zHLM"), nStatus);
+        receipt.SetStatus(_("Value is below the smallest available denomination (= 1) of zXSCR"), nStatus);
         return false;
     }
 
@@ -4808,7 +4808,7 @@ bool CWallet::CreateZerocoinSpendTransaction(CAmount nValue, int nSecurityLevel,
         if (mint.GetVersion() < libzerocoin::PrivateCoin::PUBKEY_VERSION) {
             if (nSecurityLevel < 100) {
                 nStatus = ZPIV_SPEND_V1_SEC_LEVEL;
-                receipt.SetStatus(_("Version 1 zHLM require a security level of 100 to successfully spend."), nStatus);
+                receipt.SetStatus(_("Version 1 zXSCR require a security level of 100 to successfully spend."), nStatus);
                 return false;
             }
         }
@@ -5108,8 +5108,8 @@ void CWallet::ZPivBackupWallet()
 
     BackupWallet(*this, backupPath.string());
 
-    if(!GetArg("-zhlmbackuppath", "").empty()) {
-        filesystem::path customPath(GetArg("-zhlmbackuppath", ""));
+    if(!GetArg("-zxscrbackuppath", "").empty()) {
+        filesystem::path customPath(GetArg("-zxscrbackuppath", ""));
         filesystem::create_directories(customPath);
 
         if(!customPath.has_extension()) {

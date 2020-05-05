@@ -12,9 +12,9 @@ Please report bugs using the issue tracker at github:
 Recommended Update
 ==============
 
-Securus Core v3.0.2 is a recommended, semi-mandatory update for all users. This release contains transaction creation bug fixes for zHLM spends, automint calculation adjustments, and other various updates/fixes.
+Securus Core v3.0.2 is a recommended, semi-mandatory update for all users. This release contains transaction creation bug fixes for zXSCR spends, automint calculation adjustments, and other various updates/fixes.
 
-zHLM spending requires this update.
+zXSCR spending requires this update.
 
 How to Upgrade
 ==============
@@ -45,21 +45,21 @@ Notable Changes
 
 Auto Wallet Backup
 ---------------------
-In addition to the automatic wallet backup that is done at each start of the client, a new automatic backup function has been added that will, by default, create a backup of the wallet file during each zHLM mint operation (zHLM spends which re-mint their change are also included in this). This functionality is controlled by the `-backupzhlm` command-line option, which defaults to `1` (enabled, auto-backup).
+In addition to the automatic wallet backup that is done at each start of the client, a new automatic backup function has been added that will, by default, create a backup of the wallet file during each zXSCR mint operation (zXSCR spends which re-mint their change are also included in this). This functionality is controlled by the `-backupzxscr` command-line option, which defaults to `1` (enabled, auto-backup).
 
-Users that wish to prevent this behavior (not recommended) can pass `-backupzhlm=0` at the command-line when starting the client, or add `backupzhlm=0` to their `securus.conf` file.
+Users that wish to prevent this behavior (not recommended) can pass `-backupzxscr=0` at the command-line when starting the client, or add `backupzxscr=0` to their `securus.conf` file.
 
-zHLM Automint Calculations
+zXSCR Automint Calculations
 ---------------------
-A bug in the automint calculations was made apparent on mainnet when block times exceeded expectations, resulting in zHLM mint transactions that were in an unconfirmed state to still be treated as if they had never been minted. This caused automint to effectively mint more than what was intended.
+A bug in the automint calculations was made apparent on mainnet when block times exceeded expectations, resulting in zXSCR mint transactions that were in an unconfirmed state to still be treated as if they had never been minted. This caused automint to effectively mint more than what was intended.
 
-zHLM Spending Fix
+zXSCR Spending Fix
 ---------------------
-The size of zHLM spend transactions is knowingly larger than normal transactions, and while this was expected, a much stricter check against the scriptsig size is used for mainnet, causing the transactions to be rejected by the mempool, and thus not being packaged into any blocks.
+The size of zXSCR spend transactions is knowingly larger than normal transactions, and while this was expected, a much stricter check against the scriptsig size is used for mainnet, causing the transactions to be rejected by the mempool, and thus not being packaged into any blocks.
 
-zHLM Transaction Recovery
+zXSCR Transaction Recovery
 ---------------------
-Due to the aforementioned issue with zHLM spending, users may find that their attempted spends are now conflicted and zHLM balances are not represented as expected. "Recovery" of these transactions can be done using the following methods:
+Due to the aforementioned issue with zXSCR spending, users may find that their attempted spends are now conflicted and zXSCR balances are not represented as expected. "Recovery" of these transactions can be done using the following methods:
 
 1. GUI:
 
@@ -94,7 +94,7 @@ git merge commit are mentioned.
 
 ### Wallet
 - #271 `5e9a086` [Wallet] Remove unused member wallet in UnlockContext inner class (Jon Spock)
-- #279 `e734010` Add -backupzhlm startup flag. (presstab)
+- #279 `e734010` Add -backupzxscr startup flag. (presstab)
 - #280 `fdc182d` [Wallet] Fix zPiv spending errors. (presstab)
 - #282 `310f216` [Wallet] Count pending zPiv balance for automint. (presstab)
 - #290 `004d7b6` Include both pending and mature zerocoins for automint calculations (presstab)
