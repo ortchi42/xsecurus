@@ -1834,12 +1834,12 @@ int64_t GetBlockValue(int nHeight)
     // Total of PoW phase adds up to all coins generated during PoW phase.
     // Total ledger value: 8891432    PoW Phase: 400 blocks
     if (nHeight == 1) {
-        nSubsidy = static_cast<int64_t>(8891033 * COIN);
+        nSubsidy = static_cast<int64_t>(8500000 * COIN);
     } else if (nHeight <= Params().LAST_POW_BLOCK()) {
-        nSubsidy = static_cast<int64_t>(1 * COIN);
+        nSubsidy = static_cast<int64_t>(2500 * COIN); //2500 a 200 blocks = 500k coins 
     // Low PoS reward for 2 weeks following initial wallet launch
     } else if (nHeight <= 28000) {
-        nSubsidy = static_cast<int64_t>(0.2 * COIN);
+        nSubsidy = static_cast<int64_t>(6 * COIN);
     } else if (nHeight <= (1 * nSubsidyReductionInterval)) {
         nSubsidy = static_cast<int64_t>(5 * COIN);
     } else if (nHeight > (1 * nSubsidyReductionInterval) && nHeight <= (2 * nSubsidyReductionInterval)) {
@@ -1866,9 +1866,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         if (nHeight < 9999) {
             return 0;
 	} else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 9999) {
-	    ret = blockValue / 2;
+	    ret = blockValue / 5 * 4;
 	} else {
-	    ret = blockValue / 2;
+	    ret = blockValue / 5 * 4;
 	}
     }
 
@@ -1879,7 +1879,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 	    ret = 0;
     } else {
         // 50/50 split of staking reward and masternode reward
-        ret = blockValue / 2;
+        ret = blockValue / 5 * 4; // 80 % Masternode 20% staking
     //} else {
     //    //When zPIV is staked, masternode only gets 2 XSCR
     //    ret = 3 * COIN;
