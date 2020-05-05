@@ -170,7 +170,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
         if (regenerate) {
             hashGenesisBlock = uint256S("");
-            genesis.nNonce = 0;
+            //genesis.nNonce = 0;
             if (true && (genesis.GetHash() != hashGenesisBlock)) {
                 uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
                 while (genesis.GetHash() > hashTarget)
@@ -304,7 +304,7 @@ public:
         hashGenesisBlock = genesis.GetHash();
         if (regenerate) {
             hashGenesisBlock = uint256S("");
-            genesis.nNonce = 0;
+            //genesis.nNonce = 0;
             if (true && (genesis.GetHash() != hashGenesisBlock)) {
                 uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
                 while (genesis.GetHash() > hashTarget)
