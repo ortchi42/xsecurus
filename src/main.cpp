@@ -1828,8 +1828,8 @@ int64_t GetBlockValue(int nHeight)
     }
 
     int64_t nSubsidy = 0;
-    // Block value is reduced every 526,000 blocks
-    int64_t nSubsidyReductionInterval = 526000;
+    // Block value is reduced every 600,000 blocks
+    int64_t nSubsidyReductionInterval = 600000;
     // Block 1: credit majority of public ledger total, for subsequent disbursal.
     // Total of PoW phase adds up to all coins generated during PoW phase.
     // Total ledger value: 8891432    PoW Phase: 400 blocks
