@@ -59,17 +59,17 @@ SOCKSPolicy accept 127.0.0.1/8
 Log notice file /var/log/tor/notices.log
 ControlPort 9051
 HiddenServiceDir /var/lib/tor/dnet/
-HiddenServicePort 9009 127.0.0.1:9009
+HiddenServicePort 14501 127.0.0.1:14501
 HiddenServiceStatistics 0
 ORPort 9001
-LongLivedPorts 9009
+LongLivedPorts 14501
 ExitPolicy reject *:*
 DisableDebuggerAttachment 0
 NumEntryGuards 8
 ```
 
 The directory can be different of course, but (both) port numbers should be equal to
-your heliumd's P2P listen port (9009 by default).
+your heliumd's P2P listen port (14501 by default).
 ```
 -externalip=X   You can tell helium about its publicly reachable address using
                 this option, and this can be a .onion address. Given the above
@@ -102,7 +102,7 @@ specify:
 ./heliumd ... -discover
 ```
 
-and open port 9009 on your firewall (or use -upnp).
+and open port 14501 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:

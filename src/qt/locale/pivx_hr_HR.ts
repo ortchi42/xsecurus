@@ -5147,8 +5147,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>Morate odrediti masternodeprivkey u konfiguraciji. Za pomoć pogledajte dokumentaciju.</translation>
     </message>
     <message>
-        <source>(9009 could be used only on mainnet)</source>
-        <translation>(9009 se može koristiti samo na mainnetu)</translation>
+        <source>(14501 could be used only on mainnet)</source>
+        <translation>(14501 se može koristiti samo na mainnetu)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -5159,8 +5159,8 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
         <translation>(default: 1)</translation>
     </message>
     <message>
-        <source>(must be 9009 for mainnet)</source>
-        <translation>(mora biti 9009 za glavnu mrežu)</translation>
+        <source>(must be 14501 for mainnet)</source>
+        <translation>(mora biti 14501 za glavnu mrežu)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

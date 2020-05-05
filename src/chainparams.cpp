@@ -58,7 +58,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (    0, uint256("0000033346b0b31697bcd178789fe1d6d10f96a7fd46d74fbf647d5ea3757348"));
+    (0, uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -70,7 +70,7 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    (0, uint256("00000fc011e0d753e70317369916e01c74881e3981f0aab77bd839f48f9c869d"));
+    (0, uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1535103494,
@@ -79,7 +79,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-    (0, uint256("410bca2b989d684a6b430d415a42546c664649117deec36f52a6750fcac72eba"));
+    (0, uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
     1535104494,
@@ -116,12 +116,12 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x1f;
-        pchMessageStart[1] = 0x0a;
-        pchMessageStart[2] = 0xc0;
-        pchMessageStart[3] = 0xe0;
+        pchMessageStart[0] = 0x81;
+        pchMessageStart[1] = 0xc4;
+        pchMessageStart[2] = 0xfd;
+        pchMessageStart[3] = 0xe9;
         vAlertPubKey = ParseHex("0x"); // Disabled
-        nDefaultPort = 9009;
+        nDefaultPort = 14501;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Helium starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210240;
         nMaxReorganizationDepth = 100;
@@ -277,7 +277,7 @@ public:
         vAlertPubKey = ParseHex("");
         bnProofOfWorkLimit = ~uint256(0) >> 1; // 0x207fffff, Helium testnet starting difficulty
         nSubsidyHalvingInterval = 210240;
-        nDefaultPort = 19009;
+        nDefaultPort = 114501;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -405,7 +405,7 @@ public:
         nTargetTimespan = 24 * 60 * 60; // Helium: 1 day
         nTargetSpacing = 60;  // Helium: 1 minute
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        nDefaultPort = 19004;
+        nDefaultPort = 14505;
 
         genesis.nTime = 1535104494;
         genesis.nBits = 0x207fffff;

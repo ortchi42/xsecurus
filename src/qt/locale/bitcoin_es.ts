@@ -4086,8 +4086,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Helium Alert" admin@foo.com
         <translation>Debes especificar un masternodeprivkey en la configuración. Por favor mira la documentación por ayuda.</translation>
     </message>
     <message>
-        <source>(9009 could be used only on mainnet)</source>
-        <translation>(9009 puede ser utilizado solo en mainnet)</translation>
+        <source>(14501 could be used only on mainnet)</source>
+        <translation>(14501 puede ser utilizado solo en mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4098,8 +4098,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Helium Alert" admin@foo.com
         <translation>(predeterminado: 1)</translation>
     </message>
     <message>
-        <source>(must be 9009 for mainnet)</source>
-        <translation>(debe ser 9009 para un mainnet)</translation>
+        <source>(must be 14501 for mainnet)</source>
+        <translation>(debe ser 14501 para un mainnet)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>
