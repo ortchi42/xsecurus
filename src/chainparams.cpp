@@ -32,7 +32,7 @@ struct SeedSpec6 {
 /**
  * Main network
  */
-static bool regenerate = false;
+static bool regenerate = true;
 
 //! Convert the pnSeeds6 array into usable address objects.
 static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data, unsigned int count)
@@ -58,7 +58,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
+    (0, uint256("0x0"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -70,7 +70,7 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    (0, uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
+    (0, uint256("0x0"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1535103494,
@@ -79,7 +79,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-    (0, uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
+    (0, uint256("0x0"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
     1535104494,
@@ -163,7 +163,7 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 4;
-        genesis.nTime = 1584392500;
+        genesis.nTime = 1588688367;
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 9781;
 
@@ -298,7 +298,7 @@ public:
         nRejectOldSporkKey = 1537966800; // (PIVX: 1527811200) //!> Fully reject old spork key after (GMT): Wednesday, September 26,2018 12:00 PM
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1535103494;
+        genesis.nTime = 1588688367;
         genesis.nNonce = 311676;
 
         hashGenesisBlock = genesis.GetHash();
@@ -403,7 +403,7 @@ public:
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         nDefaultPort = 14505;
 
-        genesis.nTime = 1535104494;
+        genesis.nTime = 1588688367;
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 3;
 
