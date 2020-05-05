@@ -193,7 +193,7 @@ public:
             LogPrintf(" time: %u\n", genesis.nTime);
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
-            assert(hashGenesisBlock == uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
+            assert(hashGenesisBlock == uint256("0x46c538ac6944b1daafb87d8d70b6ed2ce36bdf9e7eb33f5ff4f9aa16b0b1e7a8"));
             assert(genesis.hashMerkleRoot == uint256("0x399221875e775436115753ce7f3e402f294368f551efe787ef98724ed23d5713"));
         }
          
@@ -328,7 +328,7 @@ public:
             LogPrintf(" time: %u\n", genesis.nTime);
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
-            assert(hashGenesisBlock == uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
+            assert(hashGenesisBlock == uint256("0x46c538ac6944b1daafb87d8d70b6ed2ce36bdf9e7eb33f5ff4f9aa16b0b1e7a8"));
             assert(genesis.hashMerkleRoot == uint256("0x399221875e775436115753ce7f3e402f294368f551efe787ef98724ed23d5713"));
         }
         // Testnet --- nonce: 311676 time: 1535103494 hash: 0x0000049f035ee1942b9d3dd10965e7e07929aeaadd2c8855107dfeed05645d3f merklehash: 0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd
