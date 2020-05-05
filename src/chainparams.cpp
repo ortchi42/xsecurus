@@ -32,7 +32,7 @@ struct SeedSpec6 {
 /**
  * Main network
  */
-static bool regenerate = true;
+static bool regenerate = false;
 
 //! Convert the pnSeeds6 array into usable address objects.
 static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data, unsigned int count)
@@ -58,7 +58,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x0"));
+    (0, uint256("0x46c538ac6944b1daafb87d8d70b6ed2ce36bdf9e7eb33f5ff4f9aa16b0b1e7a8"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -70,7 +70,7 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    (0, uint256("0x0"));
+    (0, uint256("0x46c538ac6944b1daafb87d8d70b6ed2ce36bdf9e7eb33f5ff4f9aa16b0b1e7a8"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1535103494,
@@ -79,7 +79,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of
-    (0, uint256("0x0"));
+    (0, uint256("0x0b11a4cb5bd766dda6bb6393d8382fe75a52dc8a9792a5fd44a830c38ac51b2d"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
     1535104494,
@@ -194,7 +194,7 @@ public:
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
             assert(hashGenesisBlock == uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
-            assert(genesis.hashMerkleRoot == uint256("0x9b7192f263c8ecc6a52e816324933f2a93e81749d87eaa8b798516c2c67b5759"));
+            assert(genesis.hashMerkleRoot == uint256("0x399221875e775436115753ce7f3e402f294368f551efe787ef98724ed23d5713"));
         }
          
         vSeeds.push_back(CDNSSeedData("peer1", "xscr1.genesisblock.eu"));
@@ -328,8 +328,8 @@ public:
             LogPrintf(" time: %u\n", genesis.nTime);
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
-            assert(hashGenesisBlock == uint256("0x0000049f035ee1942b9d3dd10965e7e07929aeaadd2c8855107dfeed05645d3f"));
-            assert(genesis.hashMerkleRoot == uint256("0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd"));
+            assert(hashGenesisBlock == uint256("0x09d61df164a25767dd050beb72c380357374886af57a3590ca34b78549de4152"));
+            assert(genesis.hashMerkleRoot == uint256("0x399221875e775436115753ce7f3e402f294368f551efe787ef98724ed23d5713"));
         }
         // Testnet --- nonce: 311676 time: 1535103494 hash: 0x0000049f035ee1942b9d3dd10965e7e07929aeaadd2c8855107dfeed05645d3f merklehash: 0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd
 
@@ -434,8 +434,8 @@ public:
             LogPrintf(" time: %u\n", genesis.nTime);
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
-            assert(hashGenesisBlock == uint256("0x73abf6904e8a758c31d715d0c2bf8b36b86403a35bda369ec2fbcac8c2469c4d"));
-            assert(genesis.hashMerkleRoot == uint256("0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd"));
+            assert(hashGenesisBlock == uint256("0x0b11a4cb5bd766dda6bb6393d8382fe75a52dc8a9792a5fd44a830c38ac51b2d"));
+            assert(genesis.hashMerkleRoot == uint256("0x399221875e775436115753ce7f3e402f294368f551efe787ef98724ed23d5713"));
         }
         // Regtestnet --- nonce: 3 time: 1535104494 hash: 0x73abf6904e8a758c31d715d0c2bf8b36b86403a35bda369ec2fbcac8c2469c4d merklehash: 0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd
 
