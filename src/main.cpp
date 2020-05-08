@@ -1828,8 +1828,8 @@ int64_t GetBlockValue(int nHeight)
     }
 
     int64_t nSubsidy = 0;
-    // Block value is reduced every 600,000 blocks
-    int64_t nSubsidyReductionInterval = 600000;
+    // Block value is reduced every 800,000 blocks
+    int64_t nSubsidyReductionInterval = 800000;
     // Block 1: credit majority of public ledger total, for subsequent disbursal.
     // Total of PoW phase adds up to all coins generated during PoW phase.
     // Total ledger value: 8891432    PoW Phase: 400 blocks
@@ -1838,12 +1838,12 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight <= Params().LAST_POW_BLOCK()) {
         nSubsidy = static_cast<int64_t>(2500 * COIN); //2500 a 200 blocks = 500k coins 
     // Low PoS reward for 2 weeks following initial wallet launch
-    } else if (nHeight <= 28000) {
-        nSubsidy = static_cast<int64_t>(7 * COIN);
+    } else if (nHeight <= 30) {
+        nSubsidy = static_cast<int64_t>(10 * COIN);
     } else if (nHeight <= (1 * nSubsidyReductionInterval)) {
-        nSubsidy = static_cast<int64_t>(5 * COIN);
+        nSubsidy = static_cast<int64_t>(7 * COIN);
     } else if (nHeight > (1 * nSubsidyReductionInterval) && nHeight <= (2 * nSubsidyReductionInterval)) {
-        nSubsidy = static_cast<int64_t>(4.5 * COIN);
+        nSubsidy = static_cast<int64_t>(5 * COIN);
     } else if (nHeight > (2 * nSubsidyReductionInterval) && nHeight <= (3 * nSubsidyReductionInterval)) {
         nSubsidy = static_cast<int64_t>(4 * COIN);
     } else if (nHeight > (3 * nSubsidyReductionInterval) && nHeight <= (4 * nSubsidyReductionInterval)) {
