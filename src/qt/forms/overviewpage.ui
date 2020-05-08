@@ -43,7 +43,7 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1">
+     <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
       <property name="leftMargin">
        <number>0</number>
       </property>
@@ -86,7 +86,7 @@
             <number>0</number>
            </property>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_Header" stretch="1,0,1">
+            <layout class="QHBoxLayout" name="horizontalLayout_Header" stretch="1">
              <property name="spacing">
               <number>6</number>
              </property>
@@ -112,50 +112,10 @@
                 </font>
                </property>
                <property name="text">
-                <string>OVERVIEW</string>
+                <string>Overview</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_Header">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QLabel" name="labelOverviewHeaderRight">
-               <property name="minimumSize">
-                <size>
-                 <width>464</width>
-                 <height>60</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>60</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>14</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -228,6 +188,12 @@
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_5">
+                     <property name="spacing">
+                      <number>6</number>
+                     </property>
+                     <property name="sizeConstraint">
+                      <enum>QLayout::SetNoConstraint</enum>
+                     </property>
                      <item>
                       <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0,0">
                        <item>
@@ -240,9 +206,9 @@
                          </property>
                          <property name="font">
                           <font>
-                           <pointsize>12</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
+                           <pointsize>24</pointsize>
+                           <weight>50</weight>
+                           <bold>false</bold>
                           </font>
                          </property>
                          <property name="toolTip">
@@ -259,7 +225,7 @@
                           <cursorShape>WhatsThisCursor</cursorShape>
                          </property>
                          <property name="toolTip">
-                          <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Securus network after a connection is established, but this process has not completed yet.</string>
+                          <string>The displayed information may be out of date. Your wallet automatically synchronizes with the XSCR network after a connection is established, but this process has not completed yet.</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">QLabel { color: red; }</string>
@@ -288,28 +254,12 @@
                       </layout>
                      </item>
                      <item>
-                      <widget class="Line" name="line_CombinedBalance">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>1</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>1</height>
-                        </size>
-                       </property>
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <layout class="QGridLayout" name="gridLayout_3">
-                       <property name="spacing">
+                       <property name="horizontalSpacing">
                         <number>12</number>
+                       </property>
+                       <property name="verticalSpacing">
+                        <number>0</number>
                        </property>
                        <item row="1" column="0">
                         <widget class="QLabel" name="labelBalanceTextz">
@@ -322,8 +272,8 @@
                         <widget class="QLabel" name="labelBalancez">
                          <property name="font">
                           <font>
-                           <weight>75</weight>
-                           <bold>true</bold>
+                           <weight>50</weight>
+                           <bold>false</bold>
                           </font>
                          </property>
                          <property name="cursor">
@@ -354,8 +304,8 @@
                         <widget class="QLabel" name="labelTotalz">
                          <property name="font">
                           <font>
-                           <weight>75</weight>
-                           <bold>true</bold>
+                           <weight>50</weight>
+                           <bold>false</bold>
                           </font>
                          </property>
                          <property name="cursor">
@@ -383,7 +333,7 @@
                          <property name="sizeHint" stdset="0">
                           <size>
                            <width>40</width>
-                           <height>20</height>
+                           <height>0</height>
                           </size>
                          </property>
                         </spacer>
@@ -427,9 +377,9 @@
                          </property>
                          <property name="font">
                           <font>
-                           <pointsize>12</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
+                           <pointsize>24</pointsize>
+                           <weight>50</weight>
+                           <bold>false</bold>
                           </font>
                          </property>
                          <property name="text">
@@ -438,7 +388,7 @@
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLabel" name="labelPIVPercent">
+                        <widget class="QLabel" name="labelXSCRPercent">
                          <property name="text">
                           <string notr="true">0 %</string>
                          </property>
@@ -460,28 +410,12 @@
                       </layout>
                      </item>
                      <item>
-                      <widget class="Line" name="line_Balance">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>1</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>1</height>
-                        </size>
-                       </property>
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <layout class="QGridLayout" name="gridLayout">
-                       <property name="spacing">
+                       <property name="horizontalSpacing">
                         <number>12</number>
+                       </property>
+                       <property name="verticalSpacing">
+                        <number>0</number>
                        </property>
                        <item row="0" column="1">
                         <widget class="QLabel" name="labelSpendable">
@@ -737,7 +671,7 @@
                        <item row="5" column="0">
                         <widget class="QLabel" name="labelTotalText">
                          <property name="toolTip">
-                          <string>Your current balance, unconfirmed and immature transactions included</string>
+                          <string>Your current XSCR balance, unconfirmed and immature transactions included</string>
                          </property>
                          <property name="text">
                           <string>Total:</string>
@@ -756,7 +690,7 @@
                           <cursorShape>IBeamCursor</cursorShape>
                          </property>
                          <property name="toolTip">
-                          <string>Your current balance, unconfirmed and immature transactions included</string>
+                          <string>Your current XSCR balance, unconfirmed and immature transactions included</string>
                          </property>
                          <property name="text">
                           <string notr="true">0.000 000 00 XSCR</string>
@@ -825,6 +759,226 @@
                     </layout>
                    </widget>
                   </item>
+                  <item>
+                   <widget class="QFrame" name="frame_ZerocoinBalances">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_7">
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0,0,0">
+                       <item>
+                        <widget class="QLabel" name="label_5z_3">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <pointsize>24</pointsize>
+                           <weight>50</weight>
+                           <bold>false</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>zXSCR Balance</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="labelzXSCRPercent">
+                         <property name="text">
+                          <string notr="true">0 %</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_11">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QGridLayout" name="gridLayout_5">
+                       <property name="horizontalSpacing">
+                        <number>12</number>
+                       </property>
+                       <property name="verticalSpacing">
+                        <number>0</number>
+                       </property>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="labelzBalanceMatureText">
+                         <property name="toolTip">
+                          <string>Mature: more than 20 confirmation and more than 1 mint of the same denomination after it was minted.
+These zXSCR are spendable.</string>
+                         </property>
+                         <property name="text">
+                          <string>Available:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QLabel" name="labelzBalanceMature">
+                         <property name="font">
+                          <font>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="toolTip">
+                          <string>Mature: more than 20 confirmation and more than 1 mint of the same denomination after it was minted.
+These zXSCR are spendable.</string>
+                         </property>
+                         <property name="text">
+                          <string notr="true">0.000 000 00 XSCR</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QLabel" name="labelzBalanceUnconfirmedText">
+                         <property name="toolTip">
+                          <string>Unconfirmed: less than 20 confirmations
+Immature: confirmed, but less than 3 mints of the same denomination after it was minted</string>
+                         </property>
+                         <property name="text">
+                          <string>Unconfirmed:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QLabel" name="labelzBalanceUnconfirmed">
+                         <property name="font">
+                          <font>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="toolTip">
+                          <string>Unconfirmed: less than 20 confirmations
+Immature: confirmed, but less than 3 mints of the same denomination after it was minted</string>
+                         </property>
+                         <property name="text">
+                          <string notr="true">0.000 000 00 XSCR</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="0">
+                        <widget class="QLabel" name="labelzBalanceImmatureText">
+                         <property name="toolTip">
+                          <string>Unconfirmed: less than 20 confirmations
+Immature: confirmed, but less than 3 mints of the same denomination after it was minted</string>
+                         </property>
+                         <property name="text">
+                          <string>Immature:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="1">
+                        <widget class="QLabel" name="labelzBalanceImmature">
+                         <property name="font">
+                          <font>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="toolTip">
+                          <string>Unconfirmed: less than 20 confirmations
+Immature: confirmed, but less than 3 mints of the same denomination after it was minted</string>
+                         </property>
+                         <property name="text">
+                          <string notr="true">0.000 000 00 XSCR</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="0">
+                        <widget class="QLabel" name="labelzBalanceText">
+                         <property name="toolTip">
+                          <string>Your current zXSCR balance, unconfirmed and immature zXSCR included.</string>
+                         </property>
+                         <property name="text">
+                          <string>Total:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="1">
+                        <widget class="QLabel" name="labelzBalance">
+                         <property name="font">
+                          <font>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>IBeamCursor</cursorShape>
+                         </property>
+                         <property name="toolTip">
+                          <string>Your current zXSCR balance, unconfirmed and immature zXSCR included.</string>
+                         </property>
+                         <property name="text">
+                          <string notr="true">0.000 000 00 XSCR</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                         </property>
+                         <property name="textInteractionFlags">
+                          <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="2">
+                        <spacer name="horizontalSpacer_4">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer_4">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
                  </layout>
                 </widget>
                </item>
@@ -846,7 +1000,7 @@
                  <property name="frameShadow">
                   <enum>QFrame::Raised</enum>
                  </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_1" stretch="0,0,0,0,0">
+                 <layout class="QVBoxLayout" name="verticalLayout_1" stretch="0,0,0,0">
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_2">
                     <item>
@@ -859,9 +1013,9 @@
                       </property>
                       <property name="font">
                        <font>
-                        <pointsize>12</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
+                        <pointsize>24</pointsize>
+                        <weight>50</weight>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <property name="text">
@@ -875,7 +1029,7 @@
                        <cursorShape>WhatsThisCursor</cursorShape>
                       </property>
                       <property name="toolTip">
-                       <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Securus network after a connection is established, but this process has not completed yet.</string>
+                       <string>The displayed information may be out of date. Your wallet automatically synchronizes with the XSCR network after a connection is established, but this process has not completed yet.</string>
                       </property>
                       <property name="styleSheet">
                        <string notr="true">QLabel { color: red; }</string>
@@ -902,25 +1056,6 @@
                      </spacer>
                     </item>
                    </layout>
-                  </item>
-                  <item>
-                   <widget class="Line" name="line">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>1</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>1</height>
-                     </size>
-                    </property>
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                   </widget>
                   </item>
                   <item>
                    <widget class="QListView" name="listTransactions">

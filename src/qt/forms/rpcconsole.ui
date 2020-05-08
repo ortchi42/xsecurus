@@ -354,7 +354,7 @@
        <item row="16" column="0">
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="toolTip">
-          <string>Open the Securus debug log file from the current data directory. This can take a few seconds for large log files.</string>
+          <string>Open the XSCR debug log file from the current data directory. This can take a few seconds for large log files.</string>
          </property>
          <property name="text">
           <string>&amp;Open</string>
@@ -423,7 +423,7 @@
             <string/>
            </property>
            <property name="icon">
-            <iconset resource="../bitcoin.qrc">
+            <iconset resource="../XSCR.qrc">
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="shortcut">
@@ -1326,7 +1326,7 @@
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QLabel" name="wallet_customzxscrbackuppath_label">
+        <widget class="QLabel" name="wallet_customzXSCRbackuppath_label">
          <property name="text">
           <string>Custom zXSCR Backup Path:</string>
          </property>
@@ -1336,7 +1336,7 @@
         </widget>
        </item>
        <item row="4" column="1" colspan="3">
-        <widget class="QLabel" name="wallet_customzxscrbackuppath">
+        <widget class="QLabel" name="wallet_customzXSCRbackuppath">
          <property name="cursor">
           <cursorShape>IBeamCursor</cursorShape>
          </property>
@@ -1637,7 +1637,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../bitcoin.qrc"/>
+  <include location="../XSCR.qrc"/>
  </resources>
  <connections/>
 </ui>
