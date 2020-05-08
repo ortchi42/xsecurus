@@ -1866,20 +1866,20 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         if (nHeight < 9999) {
             return 0;
 	} else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 9999) {
-	    ret = blockValue / 4;
+	    ret = blockValue / 1.25;
 	} else {
-	    ret = blockValue / 4;
+	    ret = blockValue / 1.25;
 	}
     }
 
     // No masternode payments during Proof of Work phase
     if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
-	} else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 2250) {
-	    ret = 0;
+	// } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 2250) { 
+	//     ret = 0;
     } else {
         // 50/50 split of staking reward and masternode reward
-        ret = blockValue / 4; // 80 % Masternode 20% staking
+        ret = blockValue / 1.25; // 80 % Masternode 20% staking
     //} else {
     //    //When zPIV is staked, masternode only gets 2 XSCR
     //    ret = 3 * COIN;
