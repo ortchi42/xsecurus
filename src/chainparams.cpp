@@ -129,7 +129,7 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 1;
-        nTargetTimespan = 1 * 60  // Securus: 1 day
+        nTargetTimespan = 1 * 60;  // Securus: 1 day
         nTargetSpacing = 1 * 60;  // Securus: 1 minute
         nMaturity = 50;
         nMasternodeCountDrift = 20;
