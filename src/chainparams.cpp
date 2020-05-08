@@ -121,7 +121,7 @@ public:
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xe0;
         vAlertPubKey = ParseHex("0x"); // Disabled
-        nDefaultPort = 14501;
+        nDefaultPort = 20201;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Securus starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210240;
         nMaxReorganizationDepth = 100;
@@ -175,7 +175,8 @@ public:
         // vSeeds.push_back(CDNSSeedData("peer2", "xscr2.genesisblock.eu"));
         // vSeeds.push_back(CDNSSeedData("peer3", "xscr3.genesisblock.eu"));
         vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
-        vSeeds.push_back(CDNSSeedData("peer2", "85.214.24.190"));
+        vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
+        vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
         vSeeds.push_back(CDNSSeedData("peer3", "85.209.48.159"));
 	
         // Securus addresses start with 'S'
@@ -250,7 +251,7 @@ public:
         vAlertPubKey = ParseHex("");
         bnProofOfWorkLimit = ~uint256(0) >> 1; // 0x207fffff, Securus testnet starting difficulty
         nSubsidyHalvingInterval = 210240;
-        nDefaultPort = 14503;
+        nDefaultPort = 20203;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;

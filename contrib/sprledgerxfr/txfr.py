@@ -12,7 +12,7 @@ def chunks(data, SIZE=10000):
         yield {k:data[k] for k in islice(it, SIZE)}
 
 # replace rpcuser and rpcpassword values for your local node to match securus.conf
-rpc_connection = AuthServiceProxy("http://%s:%s@%s:%s" % ('rpcuser', 'rpcpassword', '127.0.0.1', '14502'))
+rpc_connection = AuthServiceProxy("http://%s:%s@%s:%s" % ('rpcuser', 'rpcpassword', '127.0.0.1', '20202'))
 print(rpc_connection.getbalance())
 
 # How many transactions in sendmany
