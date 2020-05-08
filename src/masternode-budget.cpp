@@ -926,8 +926,8 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
     if (nHeight <= 28000) {
         return 0 * COIN;
     } else {
-       // Total budget is based on 7.2% of block reward for a 30 day period (using 1 minutes per) = (60*24*30)
-       return ((nSubsidy / 100) * 7.2) * 60 * 24 * 30;
+       // Total budget is based on 10% of block reward for a 30 day period (using 1 minutes per) = (60*24*30)
+       return ((nSubsidy / 100) * 10) * 60 * 24 * 30;
     }
 }
 
