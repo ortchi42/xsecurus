@@ -82,7 +82,7 @@ width: 70px;
 
 QToolBar > QToolButton {
 Alignment: left;
-background-color: #23409B;
+background-color: rgb(155, 79, 35);
 selection-background-color:transparent;
 border:0.5px solid #888;
 border-left: 0px;
@@ -136,7 +136,7 @@ width: 20px;
 
 QLabel#progressBarLabel {
 background-color:transparent;
-color: #23409B;
+color: rgb(155, 103, 35);
 padding-left:5px;
 padding-right:5px;
 }
