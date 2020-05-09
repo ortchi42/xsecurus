@@ -74,7 +74,7 @@ color:#333;
 }
 
 QToolBar {
-background-color: qlineargradient(y1:0, y2: 1, stop: 0 #f77b25, stop: 0.75 #f77b25, stop: 0.99 #ffffff, stop: 1 #ffffff);
+background-color: #d81b1b;
 border:0px solid #333;
 padding:1;
 margin:0;
@@ -108,8 +108,8 @@ background-color: #6d3914 ;
 color:#221c21;
 }
 
-QToolBar > QToolButton#ToolbarSpacer:hover:!selected {
-background-color: #23409B; /* Do not highlight placeholder on hover */
+QToolBar > QToolButton#ToolbarSpacer:hover:selected {
+background-color: #f77b25; /* Do not highlight placeholder on hover */
 }
 
 QToolBar > QToolButton:pressed {
@@ -122,7 +122,7 @@ background-color:#fff;
 }
 
 QProgressBar {
-color: #1a9c75; /* balken sync */
+color: #000000; /* balken sync */
 border:0px solid grey;
 border-radius:5px;
 background-color:transparent;
