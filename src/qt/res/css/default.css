@@ -82,7 +82,7 @@ width: 70px;
 
 QToolBar > QToolButton {
 Alignment: left;
-background-color: rgb(155, 79, 35);
+background-color: #23409B;
 selection-background-color:transparent;
 border:0.5px solid #888;
 border-left: 0px;
@@ -136,7 +136,7 @@ width: 20px;
 
 QLabel#progressBarLabel {
 background-color:transparent;
-color: rgb(155, 103, 35);
+color: #23409B;
 padding-left:5px;
 padding-right:5px;
 }
@@ -579,7 +579,7 @@ border-radius: 4px;
 
 QSlider::sub-page:horizontal {
 /* background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #5B4C86, stop: 1 #7b67a9); */
-background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #60b5e9, stop: 1 #790e00); //790e00 #96d6f6
+background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #60b5e9, stop: 1 #96d6f6);
 border: 1px solid #333;
 height: 10px;
 border-radius: 4px;

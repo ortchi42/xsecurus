@@ -19,14 +19,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "XSCR"
-            VALUE "FileDescription",    "XSCR Core (OSS GUI client for XSCR)"
+            VALUE "CompanyName",        "Securus"
+            VALUE "FileDescription",    "Securus Core (OSS GUI client for Securus)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "XSCR-qt"
+            VALUE "InternalName",       "securus-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "XSCR-qt.exe"
-            VALUE "ProductName",        "XSCR Core"
+            VALUE "OriginalFilename",   "securus-qt.exe"
+            VALUE "ProductName",        "Securus Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END
