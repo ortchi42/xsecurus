@@ -143,25 +143,25 @@ padding-right:5px;
 }
 
 QTabWidget {
-background-color:#d81b1b;
+background-color:#fff;
 }
 
 QTabWidget::pane {
-background-color:#f2f2f2;
+background-color:#d81b1b;
 border:1px solid #c2c2c2;
 }
 
 QTabBar {
-background-color:#f2f2f2;
+background-color:#08fa00;
 color:#333;
 }
 
-QTabBar::tab:hover:!selected {
-background-color:#dedbe5;
+QTabBar::tab:hover:selected {
+background-color: #6e3be6;
 }
 
 QWidget {
-selection-background-color:#3658B8; /* Object highlight color */
+selection-background-color:rgb(255, 239, 9); /* Object highlight color */
 selection-color:#fff;
 outline:0; /* Remove Annoying Focus Rectangle */
 }
