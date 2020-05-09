@@ -174,10 +174,10 @@ public:
         // vSeeds.push_back(CDNSSeedData("peer1", "xscr1.genesisblock.eu"));
         // vSeeds.push_back(CDNSSeedData("peer2", "xscr2.genesisblock.eu"));
         // vSeeds.push_back(CDNSSeedData("peer3", "xscr3.genesisblock.eu"));
-        vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
-        vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
-        vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
-        vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
+        // vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
+        // vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
+        // vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
+        // vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
 	
         // Securus addresses start with 'S'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,75);
