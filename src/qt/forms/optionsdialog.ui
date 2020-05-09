@@ -20,7 +20,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>4</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabMain">
       <attribute name="title">
@@ -30,10 +30,10 @@
        <item>
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
-          <string>Automatically start XSCR after logging in to the system.</string>
+          <string>Automatically start Securus after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start XSCR on system login</string>
+          <string>&amp;Start Securus on system login</string>
          </property>
         </widget>
        </item>
@@ -130,85 +130,6 @@
          </property>
         </spacer>
        </item>
-       <item>
-        <widget class="QCheckBox" name="checkBoxZeromintEnable">
-         <property name="toolTip">
-          <string>Enable automatic minting of XSCR units to zXSCR</string>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
-         </property>
-         <property name="text">
-          <string>Enable zXSCR Automint</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
-         <item>
-          <widget class="QLabel" name="percentage_label">
-           <property name="toolTip">
-            <string>Percentage of incoming XSCR which get automatically converted to zXSCR via Zerocoin Protocol (min: 10%)</string>
-           </property>
-           <property name="text">
-            <string>Percentage of autominted zXSCR</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="zeromintPercentage">
-           <property name="minimum">
-            <number>1</number>
-           </property>
-           <property name="maximum">
-            <number>100</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
-         <property name="sizeConstraint">
-          <enum>QLayout::SetFixedSize</enum>
-         </property>
-         <item>
-          <widget class="QLabel" name="labelPreferredDenom">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="toolTip">
-            <string>Wait with automatic conversion to Zerocoin until enough XSCR for this denomination is available</string>
-           </property>
-           <property name="text">
-            <string>Preferred Automint zXSCR Denomination</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="preferredDenom">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>27</height>
-            </size>
-           </property>
-           <property name="toolTip">
-            <string>Wait with automatic conversion to Zerocoin until enough XSCR for this denomination is available</string>
-           </property>
-           <property name="maxVisibleItems">
-            <number>9</number>
-           </property>
-           <property name="maxCount">
-            <number>9</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="tabWallet">
@@ -299,7 +220,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the XSCR client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the Securus client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -319,7 +240,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the XSCR network through a SOCKS5 proxy.</string>
+          <string>Connect to the Securus network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
@@ -377,7 +298,7 @@
           <widget class="QLineEdit" name="proxyPort">
            <property name="minimumSize">
             <size>
-             <width>75</width>
+             <width>55</width>
              <height>0</height>
             </size>
            </property>
@@ -485,7 +406,7 @@
          <item>
           <widget class="QValueComboBox" name="lang">
            <property name="toolTip">
-            <string>The user interface language can be set here. This setting will take effect after restarting XSCR.</string>
+            <string>The user interface language can be set here. This setting will take effect after restarting Securus.</string>
            </property>
           </widget>
          </item>
@@ -507,7 +428,7 @@
          </property>
          <property name="text">
           <string>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/XSCR-project/XSCR-project-translations</string>
+https://www.transifex.com/securus-project/securus-project-translations</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -746,16 +667,6 @@ https://www.transifex.com/XSCR-project/XSCR-project-translations</string>
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="cancelButton">
-       <property name="text">
-        <string>&amp;Cancel</string>
-       </property>
-       <property name="autoDefault">
-        <bool>false</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="okButton">
        <property name="text">
         <string>&amp;OK</string>
@@ -765,6 +676,16 @@ https://www.transifex.com/XSCR-project/XSCR-project-translations</string>
        </property>
        <property name="default">
         <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>&amp;Cancel</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
      </item>

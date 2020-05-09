@@ -22,11 +22,8 @@
   <layout class="QVBoxLayout" name="verticalLayout_8">
    <item>
     <widget class="QTabWidget" name="multisigTabWidget">
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
      <property name="styleSheet">
-      <string notr="true"/>
+      <string notr="true">QScrollArea{border: 1px solid #5b4c7c;}</string>
      </property>
      <property name="currentIndex">
       <number>1</number>
@@ -99,6 +96,10 @@
            <property name="text">
             <string>&amp;Add Address / Key</string>
            </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
+           </property>
            <property name="autoDefault">
             <bool>false</bool>
            </property>
@@ -140,9 +141,6 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
-         <property name="styleSheet">
-          <string notr="true">border:0;</string>
-         </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
@@ -151,8 +149,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>761</width>
-            <height>184</height>
+            <width>759</width>
+            <height>166</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -194,6 +192,10 @@
            </property>
            <property name="text">
             <string>C&amp;reate</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/filesave</normaloff>:/icons/filesave</iconset>
            </property>
            <property name="autoDefault">
             <bool>false</bool>
@@ -264,6 +266,10 @@ Please be patient after clicking import.</string>
            </property>
            <property name="text">
             <string>&amp;Import Redeem</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../bitcoin.qrc">
+             <normaloff>:/icons/receiving_addresses</normaloff>:/icons/receiving_addresses</iconset>
            </property>
           </widget>
          </item>
@@ -368,7 +374,7 @@ Please be patient after clicking import.</string>
                 <string>Add a Raw Input</string>
                </property>
                <property name="icon">
-                <iconset resource="../XSCR.qrc">
+                <iconset resource="../bitcoin.qrc">
                  <normaloff>:/css/default</normaloff>:/css/default</iconset>
                </property>
               </widget>
@@ -383,12 +389,6 @@ Please be patient after clicking import.</string>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="styleSheet">
-              <string notr="true">border:0;</string>
-             </property>
-             <property name="lineWidth">
-              <number>0</number>
-             </property>
              <property name="widgetResizable">
               <bool>true</bool>
              </property>
@@ -397,8 +397,8 @@ Please be patient after clicking import.</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>749</width>
-                <height>141</height>
+                <width>747</width>
+                <height>131</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -445,6 +445,10 @@ Please be patient after clicking import.</string>
                <property name="text">
                 <string>Add &amp;Destination</string>
                </property>
+               <property name="icon">
+                <iconset resource="../bitcoin.qrc">
+                 <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
+               </property>
               </widget>
              </item>
              <item>
@@ -470,9 +474,6 @@ Please be patient after clicking import.</string>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="styleSheet">
-              <string notr="true">border:0;</string>
-             </property>
              <property name="widgetResizable">
               <bool>true</bool>
              </property>
@@ -481,8 +482,8 @@ Please be patient after clicking import.</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>749</width>
-                <height>140</height>
+                <width>747</width>
+                <height>130</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -527,6 +528,10 @@ Please be patient after clicking import.</string>
                </property>
                <property name="text">
                 <string>Cr&amp;eate</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../bitcoin.qrc">
+                 <normaloff>:/icons/export</normaloff>:/icons/export</iconset>
                </property>
                <property name="autoDefault">
                 <bool>false</bool>
@@ -645,6 +650,10 @@ txScrollArea:{
                <property name="text">
                 <string>S&amp;ign</string>
                </property>
+               <property name="icon">
+                <iconset resource="../bitcoin.qrc">
+                 <normaloff>:/icons/edit</normaloff>:/icons/edit</iconset>
+               </property>
                <property name="autoDefault">
                 <bool>false</bool>
                </property>
@@ -673,6 +682,10 @@ txScrollArea:{
                <property name="text">
                 <string>Co&amp;mmit</string>
                </property>
+               <property name="icon">
+                <iconset resource="../bitcoin.qrc">
+                 <normaloff>:/icons/send</normaloff>:/icons/send</iconset>
+               </property>
                <property name="autoDefault">
                 <bool>true</bool>
                </property>
@@ -693,6 +706,10 @@ txScrollArea:{
                  </property>
                  <property name="text">
                   <string>Add Private &amp;Key</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../bitcoin.qrc">
+                   <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
                  </property>
                 </widget>
                </item>
@@ -763,7 +780,7 @@ txScrollArea:{
                 <x>0</x>
                 <y>0</y>
                 <width>755</width>
-                <height>68</height>
+                <height>168</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -778,7 +795,7 @@ txScrollArea:{
                  <property name="sizeHint" stdset="0">
                   <size>
                    <width>20</width>
-                   <height>40</height>
+                   <height>20</height>
                   </size>
                  </property>
                 </spacer>
@@ -791,19 +808,6 @@ txScrollArea:{
          </item>
         </layout>
        </item>
-       <item>
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
       </layout>
      </widget>
     </widget>
@@ -811,7 +815,7 @@ txScrollArea:{
   </layout>
  </widget>
  <resources>
-  <include location="../XSCR.qrc"/>
+  <include location="../bitcoin.qrc"/>
  </resources>
  <connections/>
 </ui>

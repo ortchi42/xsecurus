@@ -28,9 +28,6 @@
      <property name="toolTip">
       <string>QR Code</string>
      </property>
-     <property name="lineWidth">
-      <number>0</number>
-     </property>
      <property name="textFormat">
       <enum>Qt::PlainText</enum>
      </property>
@@ -57,13 +54,10 @@
       </size>
      </property>
      <property name="frameShape">
-      <enum>QFrame::Box</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
-     </property>
-     <property name="lineWidth">
-      <number>0</number>
      </property>
      <property name="tabChangesFocus">
       <bool>true</bool>
