@@ -22,6 +22,7 @@
 /* medium-purple1:     #3658B8 (main purple for dark backgrounds)                       */
 /* medium-purple2:     #1541A4 (sligtly darker for gradients)                           */
 /* fuchsia:            #1C35DF                                                          */
+/* Securus urange:     #f77b25                                                          */
 /****************************************************************************************/
 /*                                                                                      */
 /* Note: it's sometimes not easy to figure out all those screen elements, so unused     */
@@ -51,7 +52,7 @@ background-color:#fff;
 }
 
 QMenuBar::item {
-background-color:#fff;
+background-color:#f77b25;
 color:#333;
 }
 
