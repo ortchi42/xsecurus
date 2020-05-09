@@ -104,7 +104,7 @@ color:#f77b25;
 
 /* QToolBar > QToolButton:hover:!selected { */
 QToolBar > QToolButton:hover {
-background-color: #f77b25 ;
+background-color: #6d3914 ;
 color:#221c21;
 }
 
@@ -113,8 +113,8 @@ background-color: #23409B; /* Do not highlight placeholder on hover */
 }
 
 QToolBar > QToolButton:pressed {
-background-color: qlineargradient(x1:0, x2: 1, stop: 0 #00a300, stop: 0.07 #00a300, stop: 0.0701 #23409B, stop: 1 #23409B);
-color:#fff;
+background-color: #221c21 ;
+color: #f77b25;
 }
 
 QMessageBox {
@@ -131,13 +131,13 @@ padding-right:0px;
 }
 
 QProgressBar::chunk {
-background-color:#3658B8;
+background-color:#f77b25;
 width: 20px;
 }
 
 QLabel#progressBarLabel {
 background-color:transparent;
-color: #23409B;
+color: #f77b25;
 padding-left:5px;
 padding-right:5px;
 }
@@ -222,7 +222,7 @@ background-color:#e7e7e7;
 /* .QValidatedLineEdit:checked, .QLineEdit:checked */
 
 .QValidatedLineEdit:disabled, .QLineEdit:disabled, .QTextEdit:disabled {
-color: #3658B8;
+color: #f77b25;
 background-color:#f2f2f2;
 }
 
@@ -259,7 +259,7 @@ QPushButton:focus {
 }
 
 QPushButton:pressed {
-background-color: #3658B8;
+background-color: #f77b25;
 border:1px solid #000000;
 background-color: qlineargradient(y1:0, y2: 1, stop: 0 #00ff00, stop: 0.1 #00ff00, stop: 0.101 #23409B, stop: 0.9 #23409B, stop: 0.901 #00ff00, stop: 1 #00ff00);
 }
@@ -286,7 +286,7 @@ background-color: #f2f2f2;
 }
 
 QComboBox { /* Dropdown Menus */
-border:1px solid #3658B8;
+border:1px solid #f77b25;
 padding: 3px 5px 3px 5px;
 background:#fcfcfc;
 min-height:25px;
