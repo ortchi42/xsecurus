@@ -83,7 +83,7 @@ width: 70px;
 
 QToolBar > QToolButton {
 Alignment: left;
-background-color: rgb(4, 9, 27); /* button menu background*/
+background-color: #221c21; /* button menu background*/
 selection-background-color:transparent;
 border:0.5px solid #888;
 border-left: 0px;
@@ -98,14 +98,14 @@ height: 60px;
 }
 
 QToolBar > QToolButton:checked {
-background-color: #eb4ac8 ;
-color:#25f75a;
+background-color: #221c21 ;
+color:#f77b25;
 }
 
 /* QToolBar > QToolButton:hover:!selected { */
 QToolBar > QToolButton:hover {
-background-color: #ffffff ;
-color:#f77b25;
+background-color: #f77b25 ;
+color:#221c21;
 }
 
 QToolBar > QToolButton#ToolbarSpacer:hover:!selected {
