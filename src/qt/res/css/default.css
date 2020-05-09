@@ -1691,11 +1691,11 @@ background-color:#ffffff;
 /********************************* CALENDAR WIDGET **************************************/
 
 QCalendarView {
-border:1px solid #333;
+border:1px solid #000;
 }
 
 QCalendarWidget QWidget#qt_calendar_navigationbar { /* Calendar widget navigation bar */
-background-color:#f77b25;
+background-color:#a34d10;
 font-weight:bold;
 }
 
@@ -1705,9 +1705,9 @@ background-color:#fff;
 }
 
 QCalendarWidget QAbstractItemView:enabled { /* Calendar widget weekdays in month */
-color:#333;
+color:#000;
 }
 
 QCalendarWidget QAbstractItemView:disabled { /* Calendar widget days not in month */
-color:#818181;
+color:#000;
 }
