@@ -1341,7 +1341,7 @@ QDialog#SendCoinsDialog .QFrame#frameCoinControl .QLabel#labelCoinControlFeature
 qproperty-alignment: 'AlignVCenter | AlignLeft';
 min-width:160px;
 background-color:transparent;
-color:#382F44;
+color:rgb(255, 6, 243);
 font-weight:bold;
 font-size:14px;
 margin-right:5px;
