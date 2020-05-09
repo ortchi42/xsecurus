@@ -1,6 +1,6 @@
 #!/bin/sh
 # Requires imagemagick https://imagemagick.org/
-cp ../icons/bitcoin.png securus-1024x1024.png
+cp ../icons/bitcoin.png
 for b in 16 20 24 30 32 36 40 48 60 64 72 80 96 128 256 320 384 512
 do
 convert securus-1024x1024.png -resize ${b}x${b} bitcoin${b}.png

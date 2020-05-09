@@ -2,7 +2,7 @@
 # Requires: imagemagick https://imagemagick.org/ and
 # icnsutils from Debian linux distro or compiled binary
 # from sources: https://github.com/kornelski/libicns
-cp ../icons/bitcoin.png securus-1024x1024.png
+cp ../icons/bitcoin.png
 for b in 16 32 128 256 512
 do
 convert securus-1024x1024.png -resize ${b}x${b} icon_${b}x${b}.png
