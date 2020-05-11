@@ -29,7 +29,7 @@ def setup():
     if not os.path.isdir('gitian-builder'):
         subprocess.check_call(['git', 'clone', 'https://github.com/devrandom/gitian-builder.git'])
     if not os.path.isdir('bitcoin'):
-        subprocess.check_call(['git', 'clone', 'https://github.com/securuschain/securus.git'])
+        subprocess.check_call(['git', 'clone', 'https://github.com/XSECURUS/xsecurus.git'])
     os.chdir('gitian-builder')
     make_image_prog = ['bin/make-base-vm', '--suite', 'trusty', '--arch', 'amd64']
     if args.docker:

@@ -22,7 +22,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/securuschain/securus.git"
+- "url": "https://github.com/XSECURUS/xsecurus.git"
   "dir": "securus"
 files: []
 script: |
