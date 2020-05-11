@@ -2377,7 +2377,7 @@ MultiSend: %1</translation>
         <translation>De Dash Core ontwikkelaars</translation>
     </message>
     <message>
-        <source>The Securus Core developers</source>
+        <source>The SecurusCoin Developers</source>
         <translation>De Securus Core ontwikkelaars</translation>
     </message>
     <message>
@@ -2802,7 +2802,7 @@ MultiSend: %1</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Ontwikkelaars</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Securus Core Developers</source>
+        <source>Copyright (C) 2015-%i The SecurusCoin Developers</source>
         <translation>Copyright (C) 2015-%i The Securus Core Ontwikkelaars</translation>
     </message>
     <message>

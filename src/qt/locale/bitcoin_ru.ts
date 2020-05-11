@@ -2810,7 +2810,7 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>The Securus Core developers</source>
+        <source>The SecurusCoin Developers</source>
         <translation>Разработчики Securus Core</translation>
     </message>
     <message>
@@ -3103,7 +3103,7 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Copyright (C) 2014-%i Разработчики Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Securus Core Developers</source>
+        <source>Copyright (C) 2015-%i The SecurusCoin Developers</source>
         <translation>Copyright (C) 2015-%i Разработчики Securus Core</translation>
     </message>
     <message>

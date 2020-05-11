@@ -2877,7 +2877,7 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Os desenvolvedores do Dash Core</translation>
     </message>
     <message>
-        <source>The Securus Core developers</source>
+        <source>The SecurusCoin Developers</source>
         <translation>Os desenvolvedores do Securus Core</translation>
     </message>
     <message>
@@ -3558,7 +3558,7 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Todos os direitos reservados (C) 2014-%i aos Desenvolvedores do Dash Core</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Securus Core Developers</source>
+        <source>Copyright (C) 2015-%i The SecurusCoin Developers</source>
         <translation>Todos os direitos reservados (C) 2015-%i aos Desenvolvedores do Securus Core</translation>
     </message>
     <message>

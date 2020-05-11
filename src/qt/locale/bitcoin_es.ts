@@ -3229,7 +3229,7 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Los desarrolladores de Dash Core</translation>
     </message>
     <message>
-        <source>The Securus Core developers</source>
+        <source>The SecurusCoin Developers</source>
         <translation>Los desarrolladores de Securus Core</translation>
     </message>
     <message>
@@ -4202,8 +4202,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "Securus Alert" admin@foo.com
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Securus Core Developers</source>
-        <translation>Copyright (C) 2015-%i The Securus Core Developers</translation>
+        <source>Copyright (C) 2015-%i The SecurusCoin Developers</source>
+        <translation>Copyright (C) 2015-%i The SecurusCoin Developers</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

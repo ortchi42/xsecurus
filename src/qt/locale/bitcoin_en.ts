@@ -5106,7 +5106,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     <message>
         <location line="+1"/>
-        <source>The Securus Core developers</source>
+        <source>The SecurusCoin Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6439,7 +6439,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Securus Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) 2015-%i The Securus Core Developers</source>
+        <source>Copyright (C) 2015-%i The SecurusCoin Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

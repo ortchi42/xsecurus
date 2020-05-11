@@ -3198,7 +3198,7 @@ https://www.transifex.com/securus-project/securus-project-translations</translat
         <translation>Dash Core 개발자</translation>
     </message>
     <message>
-        <source>The Securus Core developers</source>
+        <source>The SecurusCoin Developers</source>
         <translation>Securus Core 개발자</translation>
     </message>
     <message>
@@ -4172,7 +4172,7 @@ rpcpassword=%s
         <translation>Copyright (C) 2014-%i The Dash Core 개발자들</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Securus Core Developers</source>
+        <source>Copyright (C) 2015-%i The SecurusCoin Developers</source>
         <translation>Copyright (C) 2015-%i The Securus Core 개발자</translation>
     </message>
     <message>

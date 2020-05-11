@@ -3642,7 +3642,7 @@ Bitte haben Sie Geduld...</translation>
         <translation>Die Dash Core Entwickler</translation>
     </message>
     <message>
-        <source>The Securus Core developers</source>
+        <source>The SecurusCoin Developers</source>
         <translation>Die Securus Core Entwickler</translation>
     </message>
     <message>
@@ -4455,8 +4455,8 @@ Bitte haben Sie Geduld...</translation>
         <translation>Copyright (C) 2014-%i The Dash Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2015-%i The Securus Core Developers</source>
-        <translation>Copyright (C) 2015-%i The Securus Core Developers</translation>
+        <source>Copyright (C) 2015-%i The SecurusCoin Developers</source>
+        <translation>Copyright (C) 2015-%i The SecurusCoin Developers</translation>
     </message>
     <message>
         <source>Error</source>

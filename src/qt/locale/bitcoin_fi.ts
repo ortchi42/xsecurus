@@ -2230,7 +2230,7 @@ Please check the address and try again.</source>
         <translation>Dash Core kehittäjät</translation>
     </message>
     <message>
-        <source>The Securus Core developers</source>
+        <source>The SecurusCoin Developers</source>
         <translation>Securus core kehittäjät</translation>
     </message>
     <message>
