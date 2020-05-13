@@ -22,9 +22,9 @@ Build-Depends: debhelper,
  libqrencode-dev,
  libprotobuf-dev, protobuf-compiler
 Standards-Version: 3.9.2
-Homepage: http://www.securuschain.org
-Vcs-Git: git://github.com/securuschain/securus
-Vcs-Browser: http://github.com/securuschain/securus
+Homepage: http://www.securuscoin.org
+Vcs-Git: git://github.com/XSECURUS/xsecurus
+Vcs-Browser: http://github.com/XSECURUS/xsecurus
 
 Package: securusd
 Architecture: any
