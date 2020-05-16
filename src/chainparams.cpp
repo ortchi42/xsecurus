@@ -59,7 +59,8 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (      0, uint256("00000e1dbef83856b13cfb95aa8665a2b41f6c38f4774ec78ca4ae55a7b4024e"))
-    (   2000, uint256("ce01874931e0ff20d1f733f6d04488b6b5f2fcff9b06d06572da826109b87dff"));
+    (   2000, uint256("ce01874931e0ff20d1f733f6d04488b6b5f2fcff9b06d06572da826109b87dff"))
+    (   6000, uint256("3acb9c5bf7f89ba92c44f3a02db1b6e888e822c13e4ac563f12e3899a7eb64cb"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -171,13 +172,10 @@ public:
         assert(hashGenesisBlock == uint256("00000e1dbef83856b13cfb95aa8665a2b41f6c38f4774ec78ca4ae55a7b4024e"));
         assert(genesis.hashMerkleRoot == uint256("44c3a39b62469d1f8a622e47077ed3c903c54e40b698528f44be5f35ea526030"));
 
-        // vSeeds.push_back(CDNSSeedData("peer1", "xscr1.genesisblock.eu"));
-        // vSeeds.push_back(CDNSSeedData("peer2", "xscr2.genesisblock.eu"));
-        // vSeeds.push_back(CDNSSeedData("peer3", "xscr3.genesisblock.eu"));
-        // vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
-        // vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
-        // vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
-        // vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
+        vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
+        vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
+        vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
+        vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
 	
         // Securus addresses start with 'S'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,75);
