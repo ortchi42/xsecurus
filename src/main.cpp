@@ -1832,7 +1832,7 @@ int64_t GetBlockValue(int nHeight)
     int64_t nSubsidyReductionInterval = 800000;
     // Block 1: credit majority of public ledger total, for subsequent disbursal.
     // Total of PoW phase adds up to all coins generated during PoW phase.
-    // Total ledger value: 8891432    PoW Phase: 400 blocks
+    // Total ledger value: 8891432 
     if (nHeight == 1) {
         nSubsidy = static_cast<int64_t>(8000000 * COIN);
     } else if (nHeight <= Params().LAST_POW_BLOCK()) {
