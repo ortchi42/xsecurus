@@ -44,4 +44,4 @@ Block value is reduced every 800,000 blocks
 The Securus development budget is up to a maximum of 10% XSCR per block, paid out based on approved proposals as voted on by the Securus masternode owners through the community governance process.
 
 Wallet verwendet ein Bild von:
-<a href="https://de.freepik.com/vektoren/hintergrund">Hintergrund Vektor erstellt von starline - de.freepik.com</a>
+<a href="https://de.freepik.com/vektoren/hintergrund">starline - de.freepik.com</a>
