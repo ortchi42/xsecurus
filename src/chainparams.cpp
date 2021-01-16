@@ -172,6 +172,7 @@ public:
         /** Height or Time Based Activations **/
         //nLastPOWBlock = 20160; // 14 days @ 1440 per day (PIVX: 259200, Phore 200)
         nLastPOWBlock = 200; // Short PoW phase before transition to PoS
+        nDevFundBlock = 400000; //start dev wallet phase
         //if the lowest block height (vSortedByTimestamp[0]) is >= switch height, use new modifier calc
         // nModifierUpdateBlock = 0; // (PIVX: 615800)
         nZerocoinStartHeight = 999999999; // (PIVX: 863787, Phore 90000)
@@ -266,6 +267,19 @@ public:
     }
 };
 static CMainParams mainParams;
+// dev wallet
+std::string CChainParams::GetDevFeeRewardAddress()
+{
+	return "XZopdjGPL4RgmvW2KQVNH8EdCXj8vjNPva";
+}
+
+CScript CChainParams::GetScriptForDevFeeDestination() {
+    CBitcoinAddress address(GetDevFeeRewardAddress().c_str());
+    assert(address.IsValid());
+
+    CScript script = GetScriptForDestination(address.Get());
+    return script;
+}
 
 /**
  * Testnet (v3)
@@ -291,7 +305,8 @@ public:
         nMinerThreads = 1;
         nTargetTimespan = 24 * 60 * 60; // Securus: 1 day
         nTargetSpacing = 60;  // Securus: 1 minute
-        nLastPOWBlock = 400;
+        nLastPOWBlock = 200;
+        nDevFundBlock = 210; //dev wallet testnetstart
         nMaturity = 15;
         nMasternodeCountDrift = 2;
         // nModifierUpdateBlock = 0; //approx Mon, 17 Apr 2017 04:00:00 GMT
