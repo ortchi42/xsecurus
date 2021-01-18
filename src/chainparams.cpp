@@ -32,7 +32,7 @@ struct SeedSpec6 {
 /**
  * Main network
  */
-static bool regenerate = true;
+static bool regenerate = false;
 
 //! Convert the pnSeeds6 array into usable address objects.
 static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data, unsigned int count)
@@ -104,7 +104,7 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    (0, uint256(""));
+    (0, uint256("0x00000e1dbef83856b13cfb95aa8665a2b41f6c38f4774ec78ca4ae55a7b4024e"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1584392500,
@@ -325,7 +325,7 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1584392500;
-        genesis.nNonce = 311676;
+        genesis.nNonce = 977889;
 
         hashGenesisBlock = genesis.GetHash();
         
@@ -355,8 +355,8 @@ public:
             LogPrintf(" time: %u\n", genesis.nTime);
             LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
             LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
-            assert(hashGenesisBlock == uint256("0x0000049f035ee1942b9d3dd10965e7e07929aeaadd2c8855107dfeed05645d3f"));
-            assert(genesis.hashMerkleRoot == uint256("0xedee755717c4de66ce52056e36ae0f6e9f0269667fd8a06e3c5367588cbfadbd"));
+            assert(hashGenesisBlock == uint256("0x00000e1dbef83856b13cfb95aa8665a2b41f6c38f4774ec78ca4ae55a7b4024e"));
+            assert(genesis.hashMerkleRoot == uint256("0x44c3a39b62469d1f8a622e47077ed3c903c54e40b698528f44be5f35ea526030"));
         }
 
         vFixedSeeds.clear();
