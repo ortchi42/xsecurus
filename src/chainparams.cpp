@@ -332,7 +332,7 @@ public:
         if (regenerate) {
             hashGenesisBlock = uint256S("");
             genesis.nNonce = 0;
-            if (true && (genesis.GetHash() != hashGenesisBlock)) {
+            if (true && (genesis.GetHash() == hashGenesisBlock)) {
                 uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
                 while (genesis.GetHash() > hashTarget)
                 {
