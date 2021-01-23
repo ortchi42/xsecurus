@@ -308,8 +308,8 @@ public:
         nMinerThreads = 1;
         nTargetTimespan = 24 * 60 * 60; // Securus: 1 day
         nTargetSpacing = 60;  // Securus: 1 minute
-        nLastPOWBlock = 200;
-        nDevFundBlock = 210; //dev wallet testnetstart
+        nLastPOWBlock = 400;
+        nDevFundBlock = 500; //dev wallet testnetstart
         nMaturity = 15;
         nMasternodeCountDrift = 2;
         // nModifierUpdateBlock = 0; //approx Mon, 17 Apr 2017 04:00:00 GMT

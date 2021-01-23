@@ -1822,13 +1822,13 @@ int64_t GetBlockValue(int nHeight)
     if (nHeight == 1) {
         nSubsidy = static_cast<int64_t>(8000000 * COIN);
     } else if (nHeight <= Params().LAST_POW_BLOCK()) {
-        nSubsidy = static_cast<int64_t>(2500 * COIN); //2500 a 200 blocks = 500k coins 
+        nSubsidy = static_cast<int64_t>(100 * COIN); //2500 a 200 blocks = 500k coins 
     // Low PoS reward for 2 weeks following initial wallet launch
-    } else if (nHeight <= 230 && nHeight > Params().LAST_POW_BLOCK()) {
+    } else if (nHeight <= 500 && nHeight > Params().LAST_POW_BLOCK()) {
         nSubsidy = static_cast<int64_t>(7 * COIN);
-    } else if (nHeight > 240 && nHeight <= 430) {
+    } else if (nHeight > 500 && nHeight <= 550) {
         nSubsidy = static_cast<int64_t>(6 * COIN);
-    } else if (nHeight > 250 && nHeight <= 440) {
+    } else if (nHeight > 550 && nHeight <= 600) {
         nSubsidy = static_cast<int64_t>(4 * COIN);
     } else {
         nSubsidy = static_cast<int64_t>(2 * COIN);
