@@ -273,7 +273,7 @@ static CMainParams mainParams;
 // dev wallet
 std::string CChainParams::GetDevFeeRewardAddress()
 {
-	return "mspKF9KB492c31fGPf8NsneykXwC2wMVuC";
+	return "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk";
 }
 
 CScript CChainParams::GetScriptForDevFeeDestination() {
@@ -390,7 +390,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04576ed15c0f77fca97637eeceeb32494db7fcddb8601338301b85f7c6197117719178eddb65332f2b42f65bbe175c0d3bbc949f3892dc3fbfb964d4ca35c1f6e2";
+        strSporkKey = "046a1383c1fadf0f0698523069bb111762b985b9b4bfab775c071d0bbbe6c6e44c92ac036d3a05b069448a2fbafb188d6d341d0d423aba0e92de590eabb113a48e";
         strSporkKeyOld = "04beb92bb57470a4e6b011a291026c8cb6ce59c20b36ae5128d88b723c198443cb35cb2609eb9054f9fc49aa9f49257026cd1a09afb3fd7e1429086ab708ffb482";
         strObfuscationPoolDummyAddress = "m57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
         nStartMasternodePayments = 1527634800; //30th May 2018 00:00:00
