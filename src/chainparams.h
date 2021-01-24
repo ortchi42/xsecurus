@@ -171,6 +171,7 @@ protected:
     int nPoolMaxTransactions;
     std::string strSporkKey;
     std::string strSporkKeyOld;
+    std::string devxwallet;
     int64_t nEnforceNewSporkKey;
     int64_t nRejectOldSporkKey;
     std::string strObfuscationPoolDummyAddress;

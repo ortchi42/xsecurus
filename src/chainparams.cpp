@@ -241,7 +241,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "04576ed15c0f77fca97637eeceeb32494db7fcddb8601338301b85f7c6197117719178eddb65332f2b42f65bbe175c0d3bbc949f3892dc3fbfb964d4ca35c1f6e2";
+        strSporkKey = "04a3f031e5c1b337c9b4d34ed595f7568acb9ec81c2b4b956abb63ee67b7a39ba25628ec76748b9cd2cfd95cc4eb90a1775500ac97d4adb6d334a54fdf8c6a8f81";
         strSporkKeyOld = "04beb92bb57470a4e6b011a291026c8cb6ce59c20b36ae5128d88b723c198443cb35cb2609eb9054f9fc49aa9f49257026cd1a09afb3fd7e1429086ab708ffb482";
         strObfuscationPoolDummyAddress = "X87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
         nStartMasternodePayments = 1527634800; // 2018-05-30 00:00:00
@@ -262,6 +262,7 @@ public:
         nZerocoinRequiredStakeDepth = 200; //The required confirmations for a zpiv to be stakable
 
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
+        devxwallet = "XSn3VfkpjGftgF4Umg2h7EMcSHnhgsmznK";
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -390,12 +391,13 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "046a1383c1fadf0f0698523069bb111762b985b9b4bfab775c071d0bbbe6c6e44c92ac036d3a05b069448a2fbafb188d6d341d0d423aba0e92de590eabb113a48e";
+        strSporkKey = "040e0c130f23e1eaf814706f03bcb5f93fdb51ef7b79806cb84703d81dc144497616468417a1585bb8c4034ca4dc0cf4c17424832151e607763c96b9cafa238f1f";
         strSporkKeyOld = "04beb92bb57470a4e6b011a291026c8cb6ce59c20b36ae5128d88b723c198443cb35cb2609eb9054f9fc49aa9f49257026cd1a09afb3fd7e1429086ab708ffb482";
         strObfuscationPoolDummyAddress = "m57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
         nStartMasternodePayments = 1527634800; //30th May 2018 00:00:00
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                        // here because we only have a 8 block finalization window on testnet
+        devxwallet = "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk";
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
