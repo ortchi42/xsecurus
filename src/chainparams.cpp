@@ -309,9 +309,9 @@ public:
         nMinerThreads = 1;
         nTargetTimespan = 24 * 60 * 60; // Securus: 1 day
         nTargetSpacing = 60;  // Securus: 1 minute
-        nLastPOWBlock = 400;
-        nDevFundBlock = 500; //dev wallet testnetstart
-        nMaturity = 15;
+        nLastPOWBlock = 250;
+        nDevFundBlock = 300; //dev wallet testnetstart
+        nMaturity = 1;
         nMasternodeCountDrift = 2;
         // nModifierUpdateBlock = 0; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 21000000 * COIN;
@@ -365,6 +365,12 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
+        vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
+        vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
+        //vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
+        
+        vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
+        vSeeds.push_back(CDNSSeedData("felix", "85.214.24.190"));
 	
 
         // Testnet Securus addresses start with 'm' or 'n'
