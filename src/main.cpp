@@ -1817,6 +1817,8 @@ int64_t GetBlockValue(int nHeight)
 {
     int64_t nSubsidy = 0;
 
+    // TESTNET
+
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         // set testnet PoW period reward
     if (nHeight == 1) {
@@ -1837,11 +1839,8 @@ int64_t GetBlockValue(int nHeight)
 
     }
 
-    // Block value is reduced every 800,000 blocks
-    // int64_t nSubsidyReductionInterval = 525600;
-    // Block 1: credit majority of public ledger total, for subsequent disbursal.
-    // Total of PoW phase adds up to all coins generated during PoW phase.
-    // Total ledger value: 8891432 
+    // MAINNET
+
     if (nHeight == 1) {
         nSubsidy = static_cast<int64_t>(8000000 * COIN);
     } else if (nHeight <= Params().LAST_POW_BLOCK()) {
@@ -1864,9 +1863,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     int64_t ret = 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight <= Params().LAST_POW_BLOCK()) {
+        if (nHeight <= 200) {
         ret = 0;
-	} else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= Params().DEV_FUND_BLOCK()) {
+	} else if (nHeight > 200 && nHeight <= Params().DEV_FUND_BLOCK()) {
 	    ret = blockValue / 1.25;
 	} else {
 	    ret = blockValue / 20;
