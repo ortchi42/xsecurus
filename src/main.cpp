@@ -1860,6 +1860,13 @@ int64_t GetBlockValue(int nHeight)
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount, bool isZPIVStake)
 {
+    if (Params().DEV_WALLET() != "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk") {
+            
+                LogPrintf("%s : wrong devwallet !\n", __func__);
+                Misbehaving(pfrom->GetId(), 100);
+                return;
+            
+        }
     int64_t ret = 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
