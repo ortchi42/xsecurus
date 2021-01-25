@@ -262,7 +262,7 @@ public:
         nZerocoinRequiredStakeDepth = 200; //The required confirmations for a zpiv to be stakable
 
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
-        devxwallet = "XSn3VfkpjGftgF4Umg2h7EMcSHnhgsmznK";
+
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -270,12 +270,12 @@ public:
         return data;
     }
 };
+
 static CMainParams mainParams;
 // dev wallet
 std::string CChainParams::GetDevFeeRewardAddress()
 {
-	//return "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk";
-    return devxwallet;
+	return "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk";
 }
 
 CScript CChainParams::GetScriptForDevFeeDestination() {
@@ -404,7 +404,6 @@ public:
         nStartMasternodePayments = 1527634800; //30th May 2018 00:00:00
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                        // here because we only have a 8 block finalization window on testnet
-        devxwallet = "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk";
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
     {
