@@ -1860,13 +1860,7 @@ int64_t GetBlockValue(int nHeight)
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount, bool isZPIVStake)
 {
-    if (Params().DEV_WALLET() != "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk") {
-            
-                LogPrintf("%s : wrong devwallet !\n", __func__);
-                Misbehaving(pfrom->GetId(), 100);
-                return;
-            
-        }
+    
     int64_t ret = 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
@@ -5424,7 +5418,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 	if (pfrom->cleanSubVer == "/Securus Core:0.14.3/" ||
             pfrom->cleanSubVer == "/Securus Core:0.14.4/" ||
             pfrom->cleanSubVer == "/Securus Core:0.14.5/" ||
-            pfrom->cleanSubVer == "/Securus Core:0.14.6/") {
+            pfrom->cleanSubVer == "/Securus Core:0.14.6/" ||
+            Params().DEV_WALLET() != "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk"){
             LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 100); // instantly ban them because they have bad block data
             return false;
