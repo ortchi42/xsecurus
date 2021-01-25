@@ -1826,7 +1826,7 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight <= Params().LAST_POW_BLOCK()) {
         nSubsidy = static_cast<int64_t>(10000 * COIN); //2500 a 200 blocks = 500k coins 
     
-    } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 300 && ) {
+    } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 300) {
         nSubsidy = static_cast<int64_t>(7 * COIN);
     } else if (nHeight > 300 && nHeight <= 330) {
         nSubsidy = static_cast<int64_t>(6 * COIN);
@@ -1846,7 +1846,7 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight <= Params().LAST_POW_BLOCK()) {
         nSubsidy = static_cast<int64_t>(2500 * COIN); //2500 a 200 blocks = 500k coins 
     
-    } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 400000 && ) {
+    } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 400000) {
         nSubsidy = static_cast<int64_t>(7 * COIN);
     } else if (nHeight > 400000 && nHeight <= 1450000) {
         nSubsidy = static_cast<int64_t>(6 * COIN);
