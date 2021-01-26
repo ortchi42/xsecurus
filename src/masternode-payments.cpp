@@ -316,7 +316,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
     CAmount masternodePayment = GetMasternodePayment(pindexPrev->nHeight, blockValue, 0, fZPIVStake);
 
     CAmount devfee = 0;
-    if(pindexPrev->nHeight+1 >= Params().DEV_FUND_BLOCK()){
+    if(pindexPrev->nHeight+1 >= Params().DEV_FUND_BLOCK() && IsSporkActive(SPORK_17_DEVWALLET)){
      devfee = blockValue * 9/10; //90%
     }else{
      devfee = blockValue * 0; //0%
