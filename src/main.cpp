@@ -1846,9 +1846,9 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight <= Params().LAST_POW_BLOCK()) {
         nSubsidy = static_cast<int64_t>(2500 * COIN); //2500 a 200 blocks = 500k coins 
     
-    } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 400000) {
+    } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 500000) {
         nSubsidy = static_cast<int64_t>(7 * COIN);
-    } else if (nHeight > 400000 && nHeight <= 1450000) {
+    } else if (nHeight > 500000 && nHeight <= 1450000) {
         nSubsidy = static_cast<int64_t>(6 * COIN);
     } else if (nHeight > 1450000 && nHeight <= 2500000) {
         nSubsidy = static_cast<int64_t>(4 * COIN);
@@ -1866,21 +1866,20 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
-	} else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= Params().DEV_FUND_BLOCK()) {
-	    ret = blockValue / 1.25;
-	} else {
-	    ret = blockValue / 20;
-	}
+	    } else if (nHeight > Params().LAST_POW_BLOCK() {
+	    ret = blockValue / 1.25;  //80% mn 20%
+        } else if (IsSporkActive(SPORK_17_DEVWALLET)) {
+        ret = blockValue / 20; //5% mn 5% Stack
+        }
     }
 
     // No masternode payments during Proof of Work phase
     if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
-	 } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= Params().DEV_FUND_BLOCK()) { 
-	    ret = blockValue / 1.25;  // wenn POW Phase und unter dem dev block 400000 -> 5,6 MN
+	} else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= Params().DEV_FUND_BLOCK()) { 
+	    ret = blockValue / 1.25;  //80% mn 20%
     } else {
-        // 50/50 split of staking reward and masternode reward
-        ret = blockValue / 20; // POW Phase und über dev block 400000 -> 0.35
+        ret = blockValue / 20;  //5% MN 5% Stack
     //} else {
     //    //When zPIV is staked, masternode only gets 2 XSCR
     //    ret = 3 * COIN;
