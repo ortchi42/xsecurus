@@ -1866,14 +1866,14 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
-	    } else if (nHeight > Params().LAST_POW_BLOCK() {
+	    } else if (nHeight > Params().LAST_POW_BLOCK()) {
 	    ret = blockValue / 1.25;  //80% mn 20%
         } else if (IsSporkActive(SPORK_17_DEVWALLET)) {
         ret = blockValue / 20; //5% mn 5% Stack
         }
     }
 
-    // No masternode payments during Proof of Work phase
+    // MAINNET
     if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
 	} else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= Params().DEV_FUND_BLOCK()) { 
@@ -1887,6 +1887,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     //        ret = 2 * COIN;
     }
 
+    //RETURN VALUE
     return ret;
 }
 
