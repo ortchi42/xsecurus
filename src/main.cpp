@@ -1828,11 +1828,11 @@ int64_t GetBlockValue(int nHeight)
     
     } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 300) {
         nSubsidy = static_cast<int64_t>(7 * COIN);
-    } else if (nHeight > 300 && nHeight <= 330) {
+    } else if (nHeight > 300 && nHeight <= 400) {
         nSubsidy = static_cast<int64_t>(6 * COIN);
-    } else if (nHeight > 330 && nHeight <= 360) {
+    } else if (nHeight > 401 && nHeight <= 500) {
         nSubsidy = static_cast<int64_t>(4 * COIN);
-    } else if (nHeight > 360) {
+    } else if (nHeight > 501) {
         nSubsidy = static_cast<int64_t>(2 * COIN);
     }
     return nSubsidy;
@@ -1866,9 +1866,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
-	    } else if (nHeight > Params().LAST_POW_BLOCK()) {
+	    } else if (nHeight > Params().LAST_POW_BLOCK() && !IsSporkActive(SPORK_17_DEVWALLET)) {
 	    ret = blockValue / 1.25;  //80% mn 20%
-        } else if (IsSporkActive(SPORK_17_DEVWALLET)) {
+        } else if (nHeight > Params().LAST_POW_BLOCK() && IsSporkActive(SPORK_17_DEVWALLET)) {
         ret = blockValue / 20; //5% mn 5% Stack
         }
     }
