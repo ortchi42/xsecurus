@@ -1821,20 +1821,21 @@ int64_t GetBlockValue(int nHeight)
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         // set testnet PoW period reward
-    if (nHeight == 1) {
-        nSubsidy = static_cast<int64_t>(8000000 * COIN);
-    } else if (nHeight <= Params().LAST_POW_BLOCK()) {
+        if (nHeight == 1) {
+            nSubsidy = static_cast<int64_t>(8000000 * COIN);
+        } else if (nHeight <= Params().LAST_POW_BLOCK()) {
         nSubsidy = static_cast<int64_t>(10000 * COIN); //2500 a 200 blocks = 500k coins 
     
-    } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 300) {
+        } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 300) {
         nSubsidy = static_cast<int64_t>(7 * COIN);
-    } else if (nHeight > 300 && nHeight <= 400) {
+        } else if (nHeight > 300 && nHeight <= 400) {
         nSubsidy = static_cast<int64_t>(6 * COIN);
-    } else if (nHeight > 401 && nHeight <= 500) {
+        } else if (nHeight > 401 && nHeight <= 500) {
         nSubsidy = static_cast<int64_t>(4 * COIN);
-    } else if (nHeight > 501) {
+        } else if (nHeight > 501) {
         nSubsidy = static_cast<int64_t>(2 * COIN);
-    }
+        }
+    
     return nSubsidy;
 
     }
@@ -1855,6 +1856,7 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight > 2500000) {
         nSubsidy = static_cast<int64_t>(2 * COIN);
     }
+    
     return nSubsidy;
 }
 
@@ -1871,25 +1873,30 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         } else if (nHeight > Params().LAST_POW_BLOCK() && IsSporkActive(SPORK_17_DEVWALLET)) {
         ret = blockValue / 20; //5% mn 5% Stack
         }
+        
+        return ret;
     }
 
     // MAINNET
     if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
-	} else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= Params().DEV_FUND_BLOCK()) { 
+	    } else if (nHeight > Params().LAST_POW_BLOCK() && !IsSporkActive(SPORK_17_DEVWALLET)) {
 	    ret = blockValue / 1.25;  //80% mn 20%
-    } else {
-        ret = blockValue / 20;  //5% MN 5% Stack
+        } else if (nHeight > Params().LAST_POW_BLOCK() && IsSporkActive(SPORK_17_DEVWALLET)) {
+        ret = blockValue / 20; //5% mn 5% Stack
+        }
+
+    return ret;
     //} else {
     //    //When zPIV is staked, masternode only gets 2 XSCR
     //    ret = 3 * COIN;
     //    if (isZPIVStake)
     //        ret = 2 * COIN;
-    }
+}
 
     //RETURN VALUE
-    return ret;
-}
+//     return ret;
+// }
 
 bool IsInitialBlockDownload()
 {
