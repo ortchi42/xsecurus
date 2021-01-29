@@ -1830,9 +1830,9 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = static_cast<int64_t>(7 * COIN);
         } else if (nHeight > 300 && nHeight <= 400) {
         nSubsidy = static_cast<int64_t>(6 * COIN);
-        } else if (nHeight > 401 && nHeight <= 500) {
+        } else if (nHeight > 400 && nHeight <= 500) {
         nSubsidy = static_cast<int64_t>(4 * COIN);
-        } else if (nHeight > 501) {
+        } else if (nHeight > 500) {
         nSubsidy = static_cast<int64_t>(2 * COIN);
         }
     
@@ -1856,7 +1856,7 @@ int64_t GetBlockValue(int nHeight)
     } else if (nHeight > 2500000) {
         nSubsidy = static_cast<int64_t>(2 * COIN);
     }
-    
+
     return nSubsidy;
 }
 
