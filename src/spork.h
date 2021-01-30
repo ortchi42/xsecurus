@@ -57,7 +57,7 @@ using namespace boost;
 #define SPORK_14_NEW_PROTOCOL_ENFORCEMENT_DEFAULT -1      //OFF
 #define SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT -1    //OFF
 #define SPORK_16_ZEROCOIN_MAINTENANCE_MODE_DEFAULT 1     //ON
-#define SPORK_17_DEVWALLET_DEFAULT 1     //ON
+#define SPORK_17_DEVWALLET_DEFAULT -1     //ON
 
 class CSporkMessage;
 class CSporkManager;

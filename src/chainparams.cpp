@@ -274,7 +274,8 @@ static CMainParams mainParams;
 // dev wallet
 std::string CChainParams::GetDevFeeRewardAddress()
 {
-	return "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk";
+	// return "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk";  //TESTNET
+    return "XSn3VfkpjGftgF4Umg2h7EMcSHnhgsmznK";  //MAINNET
 }
 
 CScript CChainParams::GetScriptForDevFeeDestination() {
