@@ -210,7 +210,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256("44c3a39b62469d1f8a622e47077ed3c903c54e40b698528f44be5f35ea526030"));
 
         vSeeds.push_back(CDNSSeedData("seed", "seed.securuscoin.org"));
-        vSeeds.push_back(CDNSSeedData("seed", "seed2.securuscoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed2", "seed2.securuscoin.org"));
         // vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
         // vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
         // vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
