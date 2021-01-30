@@ -1815,80 +1815,88 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
+    int64_t nSubsidy = 0;
+
+    // TESTNET
+
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         // set testnet PoW period reward
-        if (nHeight < 9999) {
-            return static_cast<int64_t>(250 * COIN);
-        } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 9999) {
-            return static_cast<int64_t>(200 * COIN);
-        } else {
-            return static_cast<int64_t>(200 * COIN);
+        if (nHeight == 1) {
+            nSubsidy = static_cast<int64_t>(8000000 * COIN);
+        } else if (nHeight <= Params().LAST_POW_BLOCK()) {
+        nSubsidy = static_cast<int64_t>(10000 * COIN); //2500 a 200 blocks = 500k coins 
+    
+        } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 300) {
+        nSubsidy = static_cast<int64_t>(7 * COIN);
+        } else if (nHeight > 300 && nHeight <= 400) {
+        nSubsidy = static_cast<int64_t>(6 * COIN);
+        } else if (nHeight > 400 && nHeight <= 500) {
+        nSubsidy = static_cast<int64_t>(4 * COIN);
+        } else if (nHeight > 500) {
+        nSubsidy = static_cast<int64_t>(2 * COIN);
         }
+    
+    return nSubsidy;
 
     }
 
-    int64_t nSubsidy = 0;
-    // Block value is reduced every 800,000 blocks
-    int64_t nSubsidyReductionInterval = 800000;
-    // Block 1: credit majority of public ledger total, for subsequent disbursal.
-    // Total of PoW phase adds up to all coins generated during PoW phase.
-    // Total ledger value: 8891432 
+    // MAINNET
+
     if (nHeight == 1) {
         nSubsidy = static_cast<int64_t>(8000000 * COIN);
     } else if (nHeight <= Params().LAST_POW_BLOCK()) {
         nSubsidy = static_cast<int64_t>(2500 * COIN); //2500 a 200 blocks = 500k coins 
-    // Low PoS reward for 2 weeks following initial wallet launch
-    } else if (nHeight <= 30) {
-        nSubsidy = static_cast<int64_t>(10 * COIN);
-    } else if (nHeight <= (1 * nSubsidyReductionInterval)) {
+    
+    } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 500000) {
         nSubsidy = static_cast<int64_t>(7 * COIN);
-    } else if (nHeight > (1 * nSubsidyReductionInterval) && nHeight <= (2 * nSubsidyReductionInterval)) {
-        nSubsidy = static_cast<int64_t>(5 * COIN);
-    } else if (nHeight > (2 * nSubsidyReductionInterval) && nHeight <= (3 * nSubsidyReductionInterval)) {
+    } else if (nHeight > 500000 && nHeight <= 1450000) {
+        nSubsidy = static_cast<int64_t>(6 * COIN);
+    } else if (nHeight > 1450000 && nHeight <= 2500000) {
         nSubsidy = static_cast<int64_t>(4 * COIN);
-    } else if (nHeight > (3 * nSubsidyReductionInterval) && nHeight <= (4 * nSubsidyReductionInterval)) {
-        nSubsidy = static_cast<int64_t>(3.5 * COIN);
-    } else if (nHeight > (4 * nSubsidyReductionInterval) && nHeight <= (5 * nSubsidyReductionInterval)) {
-        nSubsidy = static_cast<int64_t>(3 * COIN);
-    } else if (nHeight > (5 * nSubsidyReductionInterval) && nHeight <= (6 * nSubsidyReductionInterval)) {
-        nSubsidy = static_cast<int64_t>(2.5 * COIN);
-    } else {
+    } else if (nHeight > 2500000) {
         nSubsidy = static_cast<int64_t>(2 * COIN);
     }
+
     return nSubsidy;
 }
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount, bool isZPIVStake)
 {
+    
     int64_t ret = 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 9999) {
-            return 0;
-	} else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 9999) {
-	    ret = blockValue / 1.25;
-	} else {
-	    ret = blockValue / 1.25;
-	}
+        if (nHeight <= Params().LAST_POW_BLOCK()) {
+        ret = 0;
+	    } else if (nHeight > Params().LAST_POW_BLOCK() && !IsSporkActive(SPORK_17_DEVWALLET)) {
+	    ret = blockValue / 1.25;  //80% mn 20%
+        } else if (nHeight > Params().LAST_POW_BLOCK() && IsSporkActive(SPORK_17_DEVWALLET)) {
+        ret = blockValue / 20; //5% mn 5% Stack
+        }
+        
+        return ret;
     }
 
-    // No masternode payments during Proof of Work phase
+    // MAINNET
     if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
-	// } else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 2250) { 
-	//     ret = 0;
-    } else {
-        // 50/50 split of staking reward and masternode reward
-        ret = blockValue / 1.25; // 80 % Masternode 20% staking
+	    } else if (nHeight > Params().LAST_POW_BLOCK() && !IsSporkActive(SPORK_17_DEVWALLET)) {
+	    ret = blockValue / 1.25;  //80% mn 20%
+        } else if (nHeight > Params().LAST_POW_BLOCK() && IsSporkActive(SPORK_17_DEVWALLET)) {
+        ret = blockValue / 20; //5% mn 5% Stack
+        }
+
+    return ret;
     //} else {
     //    //When zPIV is staked, masternode only gets 2 XSCR
     //    ret = 3 * COIN;
     //    if (isZPIVStake)
     //        ret = 2 * COIN;
-    }
-
-    return ret;
 }
+
+    //RETURN VALUE
+//     return ret;
+// }
 
 bool IsInitialBlockDownload()
 {
@@ -5417,7 +5425,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 	if (pfrom->cleanSubVer == "/Securus Core:0.14.3/" ||
             pfrom->cleanSubVer == "/Securus Core:0.14.4/" ||
             pfrom->cleanSubVer == "/Securus Core:0.14.5/" ||
-            pfrom->cleanSubVer == "/Securus Core:0.14.6/") {
+            pfrom->cleanSubVer == "/Securus Core:0.14.6/" ||
+            CChainParams::GetDevFeeRewardAddress() != "XXT8EMfCATTnzK1Qr5cTiTTMDZ2UMvenpQ"){
             LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 100); // instantly ban them because they have bad block data
             return false;

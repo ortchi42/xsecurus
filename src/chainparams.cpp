@@ -93,7 +93,10 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (   300000, uint256("bda488cab11d22a4a1939e2a824a8fbecae4e157fcee1ed4c250ac16cd70d651"))
     (   310000, uint256("33a6a14c2420bde6588ea98286d2cc2baf8b7be36706b5acf1ed50e6fdb74e0e"))
     (   320000, uint256("2c2a76221572188a73b778a0b7f96e6f96aff068abb18d4d6f813e07a0a2eed6"))
-    (   330000, uint256("ad6b6e2f66aeb77441f48a63e7849016faed01dcfec42c00f2988b7c95bc7440"));
+    (   330000, uint256("ad6b6e2f66aeb77441f48a63e7849016faed01dcfec42c00f2988b7c95bc7440"))
+    (   340000, uint256("22dca52c62a24dd187cf6354adc64beef26bfcf6e07b27868709e716c4c7a939"))
+    (   350000, uint256("88eb4b9183008128f2ddc5a2dc04ec334b488a9657e6e87ede45c2564d2c02d8"))
+    (   360000, uint256("c04972e28f98657779973222bde42b31fe5210676343556d705862111eb8d7e6"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -104,7 +107,7 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of
-    (0, uint256("00000fc011e0d753e70317369916e01c74881e3981f0aab77bd839f48f9c869d"));
+    (0, uint256("0x00000e1dbef83856b13cfb95aa8665a2b41f6c38f4774ec78ca4ae55a7b4024e"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
     1584392500,
@@ -172,6 +175,7 @@ public:
         /** Height or Time Based Activations **/
         //nLastPOWBlock = 20160; // 14 days @ 1440 per day (PIVX: 259200, Phore 200)
         nLastPOWBlock = 200; // Short PoW phase before transition to PoS
+        nDevFundBlock = 400000; //start dev wallet phase
         //if the lowest block height (vSortedByTimestamp[0]) is >= switch height, use new modifier calc
         // nModifierUpdateBlock = 0; // (PIVX: 615800)
         nZerocoinStartHeight = 999999999; // (PIVX: 863787, Phore 90000)
@@ -205,12 +209,13 @@ public:
         assert(hashGenesisBlock == uint256("00000e1dbef83856b13cfb95aa8665a2b41f6c38f4774ec78ca4ae55a7b4024e"));
         assert(genesis.hashMerkleRoot == uint256("44c3a39b62469d1f8a622e47077ed3c903c54e40b698528f44be5f35ea526030"));
 
-        vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
-        vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
-        //vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
+        vSeeds.push_back(CDNSSeedData("seed", "seed.securuscoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed2", "seed2.securuscoin.org"));
+        // vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
+        // vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
+        // vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
+        // vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
         
-        vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
-        vSeeds.push_back(CDNSSeedData("felix", "185.239.238.230"));
 	
         // Securus addresses start with 'S'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,75);
@@ -237,7 +242,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "049ac4716b7ee04606680a3263c07dbf422afa466f14ae6085f4ddde666cef6b147db003bcd36a0c9bf437e78a717c380c163e5ad0a5dd8c7017eca69873bb1cb6";
+        strSporkKey = "04a3f031e5c1b337c9b4d34ed595f7568acb9ec81c2b4b956abb63ee67b7a39ba25628ec76748b9cd2cfd95cc4eb90a1775500ac97d4adb6d334a54fdf8c6a8f81";
         strSporkKeyOld = "04beb92bb57470a4e6b011a291026c8cb6ce59c20b36ae5128d88b723c198443cb35cb2609eb9054f9fc49aa9f49257026cd1a09afb3fd7e1429086ab708ffb482";
         strObfuscationPoolDummyAddress = "X87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
         nStartMasternodePayments = 1527634800; // 2018-05-30 00:00:00
@@ -258,6 +263,7 @@ public:
         nZerocoinRequiredStakeDepth = 200; //The required confirmations for a zpiv to be stakable
 
         nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
+
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -265,7 +271,22 @@ public:
         return data;
     }
 };
+
 static CMainParams mainParams;
+// dev wallet
+std::string CChainParams::GetDevFeeRewardAddress()
+{
+	// return "mxe3eWJRya31h49qrATsyWx8fJBKfF6uLk";  //TESTNET
+    return "XXT8EMfCATTnzK1Qr5cTiTTMDZ2UMvenpQ";  //MAINNET
+}
+
+CScript CChainParams::GetScriptForDevFeeDestination() {
+    CBitcoinAddress address(GetDevFeeRewardAddress().c_str());
+    assert(address.IsValid());
+
+    CScript script = GetScriptForDestination(address.Get());
+    return script;
+}
 
 /**
  * Testnet (v3)
@@ -291,8 +312,9 @@ public:
         nMinerThreads = 1;
         nTargetTimespan = 24 * 60 * 60; // Securus: 1 day
         nTargetSpacing = 60;  // Securus: 1 minute
-        nLastPOWBlock = 400;
-        nMaturity = 15;
+        nLastPOWBlock = 250;
+        nDevFundBlock = 300; //dev wallet testnetstart
+        nMaturity = 1;
         nMasternodeCountDrift = 2;
         // nModifierUpdateBlock = 0; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 21000000 * COIN;
@@ -310,13 +332,48 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1584392500;
-        genesis.nNonce = 311676;
+        genesis.nNonce = 977889;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("c5f7a41bf0ab35cc0b12d275d5f5003ec0a683ff932226382016a472ab8cc24f"));
+        
+        if (regenerate) {
+            hashGenesisBlock = uint256S("");
+            genesis.nNonce = 0;
+            if (true && (genesis.GetHash() != hashGenesisBlock)) {
+                uint256 hashTarget = CBigNum().SetCompact(genesis.nBits).getuint256();
+                while (genesis.GetHash() > hashTarget)
+                {
+                    ++genesis.nNonce;
+                    if (genesis.nNonce == 0)
+                    {
+                        ++genesis.nTime;
+                    }
+                }
+                std::cout << "// Testnet ---";
+                std::cout << " nonce: " << genesis.nNonce;
+                std::cout << " time: " << genesis.nTime;
+                std::cout << " hash: 0x" << genesis.GetHash().ToString().c_str();
+                std::cout << " merklehash: 0x"  << genesis.hashMerkleRoot.ToString().c_str() <<  "\n";
+
+            }
+        } else {
+            LogPrintf("Testnet ---\n");
+            LogPrintf(" nonce: %u\n", genesis.nNonce);
+            LogPrintf(" time: %u\n", genesis.nTime);
+            LogPrintf(" hash: 0x%s\n", genesis.GetHash().ToString().c_str());
+            LogPrintf(" merklehash: 0x%s\n", genesis.hashMerkleRoot.ToString().c_str());
+            assert(hashGenesisBlock == uint256("0x00000e1dbef83856b13cfb95aa8665a2b41f6c38f4774ec78ca4ae55a7b4024e"));
+            assert(genesis.hashMerkleRoot == uint256("0x44c3a39b62469d1f8a622e47077ed3c903c54e40b698528f44be5f35ea526030"));
+        }
 
         vFixedSeeds.clear();
         vSeeds.clear();
+        vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
+        vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
+        //vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
+        
+        vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
+        vSeeds.push_back(CDNSSeedData("felix", "85.214.24.190"));
 	
 
         // Testnet Securus addresses start with 'm' or 'n'
@@ -343,7 +400,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "0429929bc9edbbdbee4830f004d0265608fbcc4caa9feff1fe58ff97354ddcf125b1c1636663d3f447d6c29d7b04bcb6fc492d2955c567be65ecb63fa2cbe2ce36";
+        strSporkKey = "040e0c130f23e1eaf814706f03bcb5f93fdb51ef7b79806cb84703d81dc144497616468417a1585bb8c4034ca4dc0cf4c17424832151e607763c96b9cafa238f1f";
         strSporkKeyOld = "04beb92bb57470a4e6b011a291026c8cb6ce59c20b36ae5128d88b723c198443cb35cb2609eb9054f9fc49aa9f49257026cd1a09afb3fd7e1429086ab708ffb482";
         strObfuscationPoolDummyAddress = "m57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
         nStartMasternodePayments = 1527634800; //30th May 2018 00:00:00

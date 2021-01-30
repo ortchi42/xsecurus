@@ -14,7 +14,7 @@ else
     exit 1
 fi
 
-DESC=""
+DESC="2.0.0"
 SUFFIX=""
 LAST_COMMIT_DATE=""
 

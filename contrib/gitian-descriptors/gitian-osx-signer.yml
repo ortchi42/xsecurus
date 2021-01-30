@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/securuschain/securus-detached-sigs.git"
+- "url": "https://github.com/XSECURUS/xsecurus/securus-detached-sigs.git"
   "dir": "signature"
 files:
 - "securus-osx-unsigned.tar.gz"

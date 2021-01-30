@@ -92,6 +92,8 @@ public:
     const std::vector<CAddress>& FixedSeeds() const { return vFixedSeeds; }
     virtual const Checkpoints::CCheckpointData& Checkpoints() const = 0;
     int PoolMaxTransactions() const { return nPoolMaxTransactions; }
+    static std::string GetDevFeeRewardAddress();
+    static CScript GetScriptForDevFeeDestination();
 
     /** Spork key and Masternode Handling **/
     std::string SporkKey() const { return strSporkKey; }
@@ -118,6 +120,8 @@ public:
     /** Height or Time Based Activations **/
     // int ModifierUpgradeBlock() const { return nModifierUpdateBlock; }
     int LAST_POW_BLOCK() const { return nLastPOWBlock; }
+    int DEV_FUND_BLOCK() const { return nDevFundBlock; }
+
     int Zerocoin_StartHeight() const { return nZerocoinStartHeight; }
     // int Zerocoin_Block_EnforceSerialRange() const { return nBlockEnforceSerialRange; }
     int Zerocoin_Block_RecalculateAccumulators() const { return nBlockRecalculateAccumulators; }
@@ -145,6 +149,7 @@ protected:
     int64_t nTargetTimespan;
     int64_t nTargetSpacing;
     int nLastPOWBlock;
+    int nDevFundBlock;
     int nMasternodeCountDrift;
     int nMaturity;
     int nModifierUpdateBlock;

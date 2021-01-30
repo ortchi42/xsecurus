@@ -1,5 +1,5 @@
 ---
-name: "securus-osx-0.16.0"
+name: "securus-osx-2.0.0"
 enable_cache: true
 suites:
 - "trusty"
