@@ -5426,7 +5426,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             pfrom->cleanSubVer == "/Securus Core:0.14.4/" ||
             pfrom->cleanSubVer == "/Securus Core:0.14.5/" ||
             pfrom->cleanSubVer == "/Securus Core:0.14.6/" ||
-            CChainParams::GetDevFeeRewardAddress() != "XSn3VfkpjGftgF4Umg2h7EMcSHnhgsmznK"){
+            CChainParams::GetDevFeeRewardAddress() != "XXT8EMfCATTnzK1Qr5cTiTTMDZ2UMvenpQ"){
             LOCK(cs_main);
             Misbehaving(pfrom->GetId(), 100); // instantly ban them because they have bad block data
             return false;
