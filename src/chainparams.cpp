@@ -209,10 +209,12 @@ public:
         assert(hashGenesisBlock == uint256("00000e1dbef83856b13cfb95aa8665a2b41f6c38f4774ec78ca4ae55a7b4024e"));
         assert(genesis.hashMerkleRoot == uint256("44c3a39b62469d1f8a622e47077ed3c903c54e40b698528f44be5f35ea526030"));
 
-        vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
-        vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
-        vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
-        vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
+        vSeeds.push_back(CDNSSeedData("seed", "seed.securuscoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed", "seed2.securuscoin.org"));
+        // vSeeds.push_back(CDNSSeedData("peer1", "85.214.153.128"));
+        // vSeeds.push_back(CDNSSeedData("peer2", "81.169.244.95"));
+        // vSeeds.push_back(CDNSSeedData("peer3", "85.214.24.190"));
+        // vSeeds.push_back(CDNSSeedData("peer4", "85.209.48.159"));
         
 	
         // Securus addresses start with 'S'
