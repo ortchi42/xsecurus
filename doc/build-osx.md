@@ -47,9 +47,11 @@ Instructions: Homebrew
         https://github.com/XSECURUS/xsecurus.git
         cd xsecurus
 
-2.  Make the Homebrew OpenSSL headers visible to the configure script  (do ```brew info openssl``` to find out why this is necessary, or if you use Homebrew with installation folders different from the default).
+2.  Make the Homebrew OpenSSL headers visible to the configure script  (do ```brew info libressl``` to find out why this is necessary, or if you use Homebrew with installation folders different from the default).
 
-
+	export LDFLAGS="-L/usr/local/opt/libressl/lib"
+ 	export CPPFLAGS="-I/usr/local/opt/libressl/include"
+	export PKG_CONFIG_PATH="/usr/local/opt/libressl/lib/pkgconfig"
 
 3.  Build securusd:
 
