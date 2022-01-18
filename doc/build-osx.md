@@ -5,7 +5,7 @@ This guide will show you how to build securusd (headless client) for OSX.
 Notes
 -----
 
-* Tested on OS X 10.7 through 10.10 on 64-bit Intel processors only.
+* Tested on MACOS 12 on 64-bit Intel processors only.
 
 * All of the commands should be executed in a Terminal application. The
 built-in one is located in `/Applications/Utilities`.
@@ -38,24 +38,23 @@ Instructions: Homebrew
 
 #### Install dependencies using Homebrew
 
-        brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf qt5 zmq libevent
+        brew install autoconf automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf qt5 zmq libevent libressl
 
 ### Building `securusd`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/Securus-Project/Securus.git
-        cd Securus
+        https://github.com/XSECURUS/xsecurus.git
+        cd xsecurus
 
 2.  Make the Homebrew OpenSSL headers visible to the configure script  (do ```brew info openssl``` to find out why this is necessary, or if you use Homebrew with installation folders different from the default).
 
-        export LDFLAGS+=-L/usr/local/opt/openssl/lib
-        export CPPFLAGS+=-I/usr/local/opt/openssl/include
+
 
 3.  Build securusd:
 
         ./autogen.sh
-        ./configure --with-gui=qt5
+        ./configure --with-libressl --with-gui=qt5 --with-unsupported-ssl
         make
 
 4.  It is also a good idea to build and run the unit tests:
